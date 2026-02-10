@@ -7,20 +7,17 @@ import logoImage from './assets/logo.png';
 
 // --- CONFIGURATION ---
 // Lưu ý: Trong môi trường thực tế, API Key nên được bảo vệ ở backend.
-const API_KEY = "AIzaSyAUb_blchO6EQYCvaR2zkDC_A0DCHjw5hY"; 
+const API_KEY = import.meta.env.GEMINI_KEY;
 const LEAD_MAGNET_URL = "https://docs.google.com/spreadsheets/d/1T_C8jyUaDQ7GhuiwRlmbxhmGiRG-RpC20_u-PdSQY5s/edit?gid=1377980842#gid=1377980842";
 
-// --- FIREBASE SETUP (Phiên bản Localhost) ---
-// Thay vì dùng biến ảo, chúng ta khai báo trực tiếp
+// --- FIREBASE SETUP (Phiên bản Production) ---
 const firebaseConfig = {
-  // Đây là cấu hình DEMO để chạy được giao diện.
-  // Để lưu được data thật, bạn cần tạo Firebase Console và thay số thật vào đây sau.
-  apiKey: "demo-api-key",
-  authDomain: "demo-project.firebaseapp.com",
-  projectId: "demo-project",
-  storageBucket: "demo-project.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abcdef"
+  apiKey: "AIzaSyAVcAKtTCEOLb18xoH3KPx4ODRtRJ16aYY",
+  authDomain: "tho-khoi-nghiep.firebaseapp.com",
+  projectId: "tho-khoi-nghiep",
+  storageBucket: "tho-khoi-nghiep.firebasestorage.app",
+  messagingSenderId: "415024078878",
+  appId: "1:415024078878:web:225c18ab4452151a6a8e0f"
 };
 
 const app = initializeApp(firebaseConfig);
