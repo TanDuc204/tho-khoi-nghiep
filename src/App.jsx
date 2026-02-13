@@ -7,7 +7,7 @@ import logoImage from './assets/logo.png';
 
 // --- CONFIGURATION ---
 // Lưu ý: Trong môi trường thực tế, API Key nên được bảo vệ ở backend.
-const API_KEY = import.meta.env.GEMINI_KEY;
+const API_KEY = import.meta.env.VITE_GEMINI_KEY;
 const LEAD_MAGNET_URL = "https://docs.google.com/spreadsheets/d/1T_C8jyUaDQ7GhuiwRlmbxhmGiRG-RpC20_u-PdSQY5s/edit?gid=1377980842#gid=1377980842";
 
 // --- FIREBASE SETUP (Phiên bản Production) ---
