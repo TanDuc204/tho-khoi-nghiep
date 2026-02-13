@@ -118,26 +118,32 @@ const LandingPage = () => {
   };
 
   // --- TRACKING HANDLER ---
-  const handleOpenSheet = async (e) => {
-    e.preventDefault(); // Ngăn mở link ngay lập tức
+  const handleOpenSheet = (e) => {
+    e.preventDefault();
     setIsTrackingClick(true);
 
-    try {
-      if (leadId) {
-        // Update database: Đánh dấu đã click
-        const leadRef = doc(db, 'artifacts', appId, 'public', 'data', 'leads', leadId);
-        await updateDoc(leadRef, {
-          clickedMagnet: true,
-          clickedAt: serverTimestamp()
-        });
-      }
-    } catch (err) {
-      console.error("Tracking error:", err);
-      // Dù lỗi tracking vẫn phải mở link cho khách
-    } finally {
-      setIsTrackingClick(false);
-      window.open(LEAD_MAGNET_URL, '_blank');
+    // Open immediately inside user gesture to avoid mobile popup blocking.
+    const newTab = window.open(LEAD_MAGNET_URL, '_blank', 'noopener,noreferrer');
+    if (!newTab) {
+      window.location.assign(LEAD_MAGNET_URL);
     }
+
+    if (!leadId) {
+      setIsTrackingClick(false);
+      return;
+    }
+
+    const leadRef = doc(db, 'artifacts', appId, 'public', 'data', 'leads', leadId);
+    updateDoc(leadRef, {
+      clickedMagnet: true,
+      clickedAt: serverTimestamp()
+    })
+      .catch((err) => {
+        console.error("Tracking error:", err);
+      })
+      .finally(() => {
+        setIsTrackingClick(false);
+      });
   };
 
   // --- GEMINI AI FUNCTION ---
@@ -561,3 +567,4 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
