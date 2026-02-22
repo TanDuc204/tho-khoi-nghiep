@@ -43,11 +43,12 @@ const LandingPage = () => {
   const [contactMethod, setContactMethod] = useState('email'); 
   const [formData, setFormData] = useState({
     contactValue: '',
-    location: 'Hà Nội',
-    stage: 'tham_khao',
-    topic: 'chon_y_tuong',
+    location: '',
+    stage: '',
+    topic: '',
     otherTopic: '',
-    age: '18-24'
+    otherLocation: '',
+    age: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -93,6 +94,32 @@ const LandingPage = () => {
         return;
     }
     
+    // Validate required fields
+    if (!formData.location) {
+      setSubmitError('Vui lòng chọn nơi bạn ở.');
+      return;
+    }
+    if (!formData.age) {
+      setSubmitError('Vui lòng chọn độ tuổi.');
+      return;
+    }
+    if (!formData.stage) {
+      setSubmitError('Vui lòng chọn giai đoạn hiện tại.');
+      return;
+    }
+    if (!formData.topic) {
+      setSubmitError('Vui lòng chọn chủ đề quan tâm.');
+      return;
+    }
+    if (formData.location === 'Khác' && !formData.otherLocation.trim()) {
+      setSubmitError('Vui lòng nhập nơi bạn ở.');
+      return;
+    }
+    if (formData.topic === 'khac' && !formData.otherTopic.trim()) {
+      setSubmitError('Vui lòng nhập chủ đề bạn quan tâm.');
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitError('');
 
@@ -246,7 +273,7 @@ const LandingPage = () => {
         </p>
         
         <button 
-          onClick={() => { setIsSuccess(false); setFormData({...formData, contactValue: ''}); setLeadId(null); }}
+          onClick={() => { setIsSuccess(false); setFormData({...formData, contactValue: '', location: '', age: '', stage: '', topic: '', otherTopic: '', otherLocation: ''}); setLeadId(null); }}
           className="px-6 py-2 bg-white border border-gray-200 rounded-full text-gray-500 hover:bg-gray-50 hover:text-green-700 transition-colors font-medium text-sm"
         >
           Quay lại trang chủ
@@ -440,25 +467,40 @@ const LandingPage = () => {
                     <label className="text-[10px] font-bold text-gray-500 uppercase mb-1 block">Bạn ở đâu?</label>
                     <select
                       name="location"
-                      className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-700 focus:outline-none focus:border-green-500"
+                      required
+                      className={`w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-green-500 ${formData.location ? 'text-gray-700' : 'text-gray-400'}`}
                       value={formData.location}
                       onChange={handleChange}
                     >
+                      <option value="" disabled>-- Chọn --</option>
                       <option value="Hà Nội">Hà Nội</option>
                       <option value="HCM">TP. HCM</option>
                       <option value="Đà Nẵng">Đà Nẵng</option>
                       <option value="Hải Phòng">Hải Phòng</option>
                       <option value="Khác">Khác</option>
                     </select>
+                    {formData.location === 'Khác' && (
+                      <input
+                        type="text"
+                        name="otherLocation"
+                        placeholder="Nhập nơi bạn ở..."
+                        className="mt-1 w-full text-sm border border-gray-200 bg-gray-50 rounded-lg focus:border-green-500 focus:outline-none py-2 px-3"
+                        value={formData.otherLocation}
+                        onChange={handleChange}
+                        required
+                      />
+                    )}
                   </div>
                   <div>
                     <label className="text-[10px] font-bold text-gray-500 uppercase mb-1 block">Độ tuổi</label>
                     <select
                       name="age"
-                      className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-700 focus:outline-none focus:border-green-500"
+                      required
+                      className={`w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-green-500 ${formData.age ? 'text-gray-700' : 'text-gray-400'}`}
                       value={formData.age}
                       onChange={handleChange}
                     >
+                      <option value="" disabled>-- Chọn --</option>
                       <option value="<18">&lt; 18 tuổi</option>
                       <option value="18-24">18 - 24 tuổi</option>
                       <option value="25-30">25 - 30 tuổi</option>
