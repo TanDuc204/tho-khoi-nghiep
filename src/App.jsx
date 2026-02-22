@@ -1,30 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { BookOpen, TrendingUp, Users, CheckCircle, ArrowRight, ShieldCheck, MapPin, Target, HelpCircle, User, Smartphone, Mail, Sparkles, Lightbulb, Zap, ExternalLink } from 'lucide-react';
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, addDoc, serverTimestamp, updateDoc, doc } from 'firebase/firestore';
-import { getAuth, signInAnonymously, onAuthStateChanged} from 'firebase/auth';
+import { collection, addDoc, serverTimestamp, updateDoc, doc } from 'firebase/firestore';
+import { signInAnonymously, onAuthStateChanged} from 'firebase/auth';
+import { db, auth, appId } from './firebase';
 import logoImage from './assets/logo.png';
 
 // --- CONFIGURATION ---
 // Lưu ý: Trong môi trường thực tế, API Key nên được bảo vệ ở backend.
 const API_KEY = import.meta.env.VITE_GEMINI_KEY;
 const LEAD_MAGNET_URL = "https://docs.google.com/spreadsheets/d/1T_C8jyUaDQ7GhuiwRlmbxhmGiRG-RpC20_u-PdSQY5s/edit?gid=1377980842#gid=1377980842";
-
-// --- FIREBASE SETUP (Phiên bản Production) ---
-const firebaseConfig = {
-  apiKey: "AIzaSyAVcAKtTCEOLb18xoH3KPx4ODRtRJ16aYY",
-  authDomain: "tho-khoi-nghiep.firebaseapp.com",
-  projectId: "tho-khoi-nghiep",
-  storageBucket: "tho-khoi-nghiep.firebasestorage.app",
-  messagingSenderId: "415024078878",
-  appId: "1:415024078878:web:225c18ab4452151a6a8e0f"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-// Đặt tên cứng cho App ID luôn, không cần biến động nữa
-const appId = 'tho-khoi-nghiep-local';
 
 // Custom Logo Component: Logo ảnh thật
 const LogoBrick = () => (
@@ -267,10 +251,6 @@ const LandingPage = () => {
             <span>Mở Google Sheet Ngay</span>
             <ExternalLink className="w-5 h-5 opacity-70 group-hover:translate-x-1 transition-transform" />
         </button>
-
-        <p className="text-sm text-gray-500 mb-8">
-          (Chúng tôi cũng sẽ gửi một bản sao lưu vào {contactMethod === 'email' ? 'Email' : 'Zalo'} của bạn)
-        </p>
         
         <button 
           onClick={() => { setIsSuccess(false); setFormData({...formData, contactValue: '', location: '', age: '', stage: '', topic: '', otherTopic: '', otherLocation: ''}); setLeadId(null); }}
