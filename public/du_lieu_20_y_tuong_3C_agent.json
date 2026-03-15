@@ -1,0 +1,2547 @@
+{
+  "meta": {
+    "title": "Du lieu 20 y tuong san pham vat ly/handmade theo mo hinh 3C cho AI agent",
+    "language": "vi",
+    "encoding": "UTF-8",
+    "schema_version": "1.0",
+    "purpose": "Nguon du lieu cau truc de AI agent doc, loc theo 3C va render thanh cac the y tuong nhanh.",
+    "assumption_label": "[Suy luan]",
+    "important_notes": [
+      "Tat ca uoc tinh ve von, muc gia, do kho, nhan su va tiem nang phat trien la gia tri de tham khao ban dau, can dieu chinh theo dia ban, kenh ban va nang luc nguoi lam.",
+      "Du lieu uu tien de doc may, vi vay moi y tuong duoc chia thanh cac khoi trung voi cac phan tren the chi tiet.",
+      "Agent co the render 1 the tong quan tu quick_card va 1 the chi tiet tu detail_card.",
+      "Cac y tuong duoc uu tien theo tieu chi: san pham vat ly/handmade, de bat dau, khong can gioi cong nghe, co the kiem them thu nhap."
+    ]
+  },
+  "card_render_mapping": {
+    "quick_card_fields": [
+      "id",
+      "idea_name",
+      "capital_band_display",
+      "skill_tags",
+      "time_options",
+      "one_line_pitch"
+    ],
+    "detail_card_sections": [
+      "core_value",
+      "customer_segments",
+      "differentiation",
+      "financial_analysis",
+      "risks_and_challenges",
+      "distribution_and_sales_strategy",
+      "growth_potential"
+    ],
+    "financial_table_fields": [
+      "startup_capital_estimate_display",
+      "reference_price_display",
+      "main_costs",
+      "implementation_difficulty",
+      "staffing_needed"
+    ],
+    "distribution_table_fields": [
+      "model_type",
+      "main_channel",
+      "activity_description"
+    ]
+  },
+  "ideas": [
+    {
+      "id": "I01",
+      "idea_name": "Nen thom handmade",
+      "capital_band_code": "under_20m",
+      "capital_band_display": "Duoi 20 trieu VND",
+      "skill_tags": [
+        "Pha che",
+        "Thu cong",
+        "Quay chup/Marketing"
+      ],
+      "time_options": [
+        "Part-time",
+        "Full-time"
+      ],
+      "one_line_pitch": "Lam nen thom theo mui huong, concept qua tang va decor ban lam viec.",
+      "core_value": "Bien mui huong thanh trai nghiem thu gian va qua tang nho gon; de tao set theo chu de, de chup anh, de ban online.",
+      "customer_segments": [
+        "Nguoi tre, nhan vien van phong, nguoi thich decor phong",
+        "Khach mua qua sinh nhat, 8/3, 20/10, Giang sinh, Valentine",
+        "Cua hang qua tang nho, seller online can san pham dep de quay video"
+      ],
+      "differentiation": "De ca nhan hoa theo mui, mau sac, nhan dan va hop qua; de xay concept theo mua va dip le.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "8 - 15 trieu VND",
+        "startup_capital_range_vnd": [
+          8000000,
+          15000000
+        ],
+        "reference_price_display": "69.000 - 249.000 VND/san pham; 199.000 - 499.000 VND/set",
+        "main_costs": [
+          "Sap/soy wax",
+          "Tinh dau/huong lieu",
+          "Ly/hop",
+          "Tem nhan va bao bi",
+          "Dung cu nau va can"
+        ],
+        "implementation_difficulty": "Thap - Trung binh",
+        "staffing_needed": "1 nguoi giai doan dau; 2 nguoi mua cao diem"
+      },
+      "risks_and_challenges": [
+        "Can test do toa huong, do chay va tinh on dinh cua san pham",
+        "Bao bi va hinh anh anh huong manh toi kha nang chot don",
+        "Can tranh ton kho qua nhieu mui huong kho quay vong"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "Instagram, Facebook, TikTok, Shopee",
+          "activity_description": "Ban le tung mui huong, tung combo qua tang va don dat theo yeu cau."
+        },
+        {
+          "model_type": "Cong tac vien",
+          "main_channel": "Ban be, van phong, shop qua tang",
+          "activity_description": "Day manh don nho, don qua tang dip le, don theo concept."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Noi dung video ngan",
+          "activity_description": "Tap trung video unbox, test mui va setup qua tang de tang chuyen doi."
+        }
+      ],
+      "growth_potential": "Trung binh - Cao; co the mo rong sang sap thom, tui thom, room spray va gift set doanh nghiep.",
+      "quick_card": {
+        "title": "Nen thom handmade",
+        "capital": "Duoi 20 trieu VND",
+        "skills": [
+          "Pha che",
+          "Thu cong",
+          "Quay chup/Marketing"
+        ],
+        "time": [
+          "Part-time",
+          "Full-time"
+        ],
+        "pitch": "Lam nen thom theo mui huong, concept qua tang va decor ban lam viec."
+      },
+      "detail_card": {
+        "cot_loi": "Bien mui huong thanh trai nghiem thu gian va qua tang nho gon; de tao set theo chu de, de chup anh, de ban online.",
+        "khach_hang": [
+          "Nguoi tre, nhan vien van phong, nguoi thich decor phong",
+          "Khach mua qua sinh nhat, 8/3, 20/10, Giang sinh, Valentine",
+          "Cua hang qua tang nho, seller online can san pham dep de quay video"
+        ],
+        "khac_biet": "De ca nhan hoa theo mui, mau sac, nhan dan va hop qua; de xay concept theo mua va dip le.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "8 - 15 trieu VND",
+          "startup_capital_range_vnd": [
+            8000000,
+            15000000
+          ],
+          "reference_price_display": "69.000 - 249.000 VND/san pham; 199.000 - 499.000 VND/set",
+          "main_costs": [
+            "Sap/soy wax",
+            "Tinh dau/huong lieu",
+            "Ly/hop",
+            "Tem nhan va bao bi",
+            "Dung cu nau va can"
+          ],
+          "implementation_difficulty": "Thap - Trung binh",
+          "staffing_needed": "1 nguoi giai doan dau; 2 nguoi mua cao diem"
+        },
+        "rui_ro_kho_khan": [
+          "Can test do toa huong, do chay va tinh on dinh cua san pham",
+          "Bao bi va hinh anh anh huong manh toi kha nang chot don",
+          "Can tranh ton kho qua nhieu mui huong kho quay vong"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "Instagram, Facebook, TikTok, Shopee",
+            "activity_description": "Ban le tung mui huong, tung combo qua tang va don dat theo yeu cau."
+          },
+          {
+            "model_type": "Cong tac vien",
+            "main_channel": "Ban be, van phong, shop qua tang",
+            "activity_description": "Day manh don nho, don qua tang dip le, don theo concept."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Noi dung video ngan",
+            "activity_description": "Tap trung video unbox, test mui va setup qua tang de tang chuyen doi."
+          }
+        ],
+        "tiem_nang_phat_trien": "Trung binh - Cao; co the mo rong sang sap thom, tui thom, room spray va gift set doanh nghiep."
+      }
+    },
+    {
+      "id": "I02",
+      "idea_name": "Xa phong handmade co ban",
+      "capital_band_code": "under_20m",
+      "capital_band_display": "Duoi 20 trieu VND",
+      "skill_tags": [
+        "Pha che",
+        "Thu cong",
+        "Dong goi"
+      ],
+      "time_options": [
+        "Part-time",
+        "Full-time"
+      ],
+      "one_line_pitch": "Lam xa phong handmade dang banh, uu tien dong qua tang va dong co ban de ban thu nghiem.",
+      "core_value": "San pham nho gon, de tang kem trong cac set qua, phu hop nguoi thich do thu cong va san pham co hinh thuc dep.",
+      "customer_segments": [
+        "Nguoi mua qua nho, nguoi thich san pham handmade",
+        "Khach hang nu, sinh vien, nhan vien van phong",
+        "Cua hang qua tang va seller ban combo"
+      ],
+      "differentiation": "Co the tao mau, mui va khuon rieng; de ket hop voi nen, hoa sap, thiệp thanh bo qua dong bo.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "7 - 14 trieu VND",
+        "startup_capital_range_vnd": [
+          7000000,
+          14000000
+        ],
+        "reference_price_display": "35.000 - 120.000 VND/banh; 150.000 - 350.000 VND/set",
+        "main_costs": [
+          "Phoi xa phong/du lieu co ban",
+          "Huong lieu",
+          "Khuon",
+          "Mau",
+          "Bao bi va nhan"
+        ],
+        "implementation_difficulty": "Trung binh",
+        "staffing_needed": "1 nguoi giai doan dau"
+      },
+      "risks_and_challenges": [
+        "Can than trong ve thanh phan, kich ung va thong tin cong dung",
+        "Can kiem soat hinh dang, mau sac, mui de dong nhat san pham",
+        "Kho mo rong nhanh neu phu thuoc nhieu vao lam tay"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "Shopee, Facebook, Instagram",
+          "activity_description": "Ban tung banh xa phong, dong gift box co concept."
+        },
+        {
+          "model_type": "Combo",
+          "main_channel": "Shop qua tang, cac don dip le",
+          "activity_description": "Ghep voi nen, hoa sap, thiệp de tang gia tri don."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Anh san pham + feedback",
+          "activity_description": "Tao niem tin bang hinh anh chi tiet, thong tin thanh phan va cach su dung."
+        }
+      ],
+      "growth_potential": "Trung binh; hop di theo huong qua tang va combo hon la danh muc cham soc ca nhan qua rong.",
+      "quick_card": {
+        "title": "Xa phong handmade co ban",
+        "capital": "Duoi 20 trieu VND",
+        "skills": [
+          "Pha che",
+          "Thu cong",
+          "Dong goi"
+        ],
+        "time": [
+          "Part-time",
+          "Full-time"
+        ],
+        "pitch": "Lam xa phong handmade dang banh, uu tien dong qua tang va dong co ban de ban thu nghiem."
+      },
+      "detail_card": {
+        "cot_loi": "San pham nho gon, de tang kem trong cac set qua, phu hop nguoi thich do thu cong va san pham co hinh thuc dep.",
+        "khach_hang": [
+          "Nguoi mua qua nho, nguoi thich san pham handmade",
+          "Khach hang nu, sinh vien, nhan vien van phong",
+          "Cua hang qua tang va seller ban combo"
+        ],
+        "khac_biet": "Co the tao mau, mui va khuon rieng; de ket hop voi nen, hoa sap, thiệp thanh bo qua dong bo.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "7 - 14 trieu VND",
+          "startup_capital_range_vnd": [
+            7000000,
+            14000000
+          ],
+          "reference_price_display": "35.000 - 120.000 VND/banh; 150.000 - 350.000 VND/set",
+          "main_costs": [
+            "Phoi xa phong/du lieu co ban",
+            "Huong lieu",
+            "Khuon",
+            "Mau",
+            "Bao bi va nhan"
+          ],
+          "implementation_difficulty": "Trung binh",
+          "staffing_needed": "1 nguoi giai doan dau"
+        },
+        "rui_ro_kho_khan": [
+          "Can than trong ve thanh phan, kich ung va thong tin cong dung",
+          "Can kiem soat hinh dang, mau sac, mui de dong nhat san pham",
+          "Kho mo rong nhanh neu phu thuoc nhieu vao lam tay"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "Shopee, Facebook, Instagram",
+            "activity_description": "Ban tung banh xa phong, dong gift box co concept."
+          },
+          {
+            "model_type": "Combo",
+            "main_channel": "Shop qua tang, cac don dip le",
+            "activity_description": "Ghep voi nen, hoa sap, thiệp de tang gia tri don."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Anh san pham + feedback",
+            "activity_description": "Tao niem tin bang hinh anh chi tiet, thong tin thanh phan va cach su dung."
+          }
+        ],
+        "tiem_nang_phat_trien": "Trung binh; hop di theo huong qua tang va combo hon la danh muc cham soc ca nhan qua rong."
+      }
+    },
+    {
+      "id": "I03",
+      "idea_name": "Banh quy homemade dong hu",
+      "capital_band_code": "under_20m",
+      "capital_band_display": "Duoi 20 trieu VND",
+      "skill_tags": [
+        "Nau nuong/Pha che",
+        "Van hanh/Quan ly"
+      ],
+      "time_options": [
+        "Part-time",
+        "Full-time"
+      ],
+      "one_line_pitch": "Lam banh quy nho dong hu hoac dong tui de ban cho hoc sinh, dan van phong va lam qua tang.",
+      "core_value": "San pham de thu, de mua lai, de dong combo; co the di theo huong snack an vat va qua tang nho.",
+      "customer_segments": [
+        "Hoc sinh, sinh vien, dan van phong",
+        "Khach mua snack an trong ngay",
+        "Khach mua hop banh nho de tang"
+      ],
+      "differentiation": "Co the di theo vi de an, bao bi xinh, combo theo dip; khong can san pham qua phuc tap de bat dau.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "10 - 18 trieu VND",
+        "startup_capital_range_vnd": [
+          10000000,
+          18000000
+        ],
+        "reference_price_display": "45.000 - 120.000 VND/hop; 15.000 - 35.000 VND/tui nho",
+        "main_costs": [
+          "Nguyen lieu bot, bo, duong",
+          "Lo nuong/dung cu",
+          "Hu/tui/hop",
+          "Tem nhan",
+          "Chi phi test mau"
+        ],
+        "implementation_difficulty": "Thap - Trung binh",
+        "staffing_needed": "1 nguoi; co the them 1 nguoi dong goi khi don tang"
+      },
+      "risks_and_challenges": [
+        "Can dam bao ve sinh, bao quan va han dung",
+        "De roi vao canh canh tranh gia neu chua co diem khac biet",
+        "Can test cong thuc de chat luong me sau on dinh"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "TikTok Shop, ShopeeFood, Facebook",
+          "activity_description": "Ban theo tui nho, hop nho va combo snack."
+        },
+        {
+          "model_type": "B2B nho",
+          "main_channel": "Quan cafe, van phong, workshop",
+          "activity_description": "Cung cap set tea-break mini hoac ban ky gui."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Video quy trinh lam banh",
+          "activity_description": "Dung video me nho, crack cookie, dong hop de tang do hap dan."
+        }
+      ],
+      "growth_potential": "Trung binh - Cao; co the mo rong sang set tea-break, hop qua banh va danh muc an vat theo mua.",
+      "quick_card": {
+        "title": "Banh quy homemade dong hu",
+        "capital": "Duoi 20 trieu VND",
+        "skills": [
+          "Nau nuong/Pha che",
+          "Van hanh/Quan ly"
+        ],
+        "time": [
+          "Part-time",
+          "Full-time"
+        ],
+        "pitch": "Lam banh quy nho dong hu hoac dong tui de ban cho hoc sinh, dan van phong va lam qua tang."
+      },
+      "detail_card": {
+        "cot_loi": "San pham de thu, de mua lai, de dong combo; co the di theo huong snack an vat va qua tang nho.",
+        "khach_hang": [
+          "Hoc sinh, sinh vien, dan van phong",
+          "Khach mua snack an trong ngay",
+          "Khach mua hop banh nho de tang"
+        ],
+        "khac_biet": "Co the di theo vi de an, bao bi xinh, combo theo dip; khong can san pham qua phuc tap de bat dau.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "10 - 18 trieu VND",
+          "startup_capital_range_vnd": [
+            10000000,
+            18000000
+          ],
+          "reference_price_display": "45.000 - 120.000 VND/hop; 15.000 - 35.000 VND/tui nho",
+          "main_costs": [
+            "Nguyen lieu bot, bo, duong",
+            "Lo nuong/dung cu",
+            "Hu/tui/hop",
+            "Tem nhan",
+            "Chi phi test mau"
+          ],
+          "implementation_difficulty": "Thap - Trung binh",
+          "staffing_needed": "1 nguoi; co the them 1 nguoi dong goi khi don tang"
+        },
+        "rui_ro_kho_khan": [
+          "Can dam bao ve sinh, bao quan va han dung",
+          "De roi vao canh canh tranh gia neu chua co diem khac biet",
+          "Can test cong thuc de chat luong me sau on dinh"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "TikTok Shop, ShopeeFood, Facebook",
+            "activity_description": "Ban theo tui nho, hop nho va combo snack."
+          },
+          {
+            "model_type": "B2B nho",
+            "main_channel": "Quan cafe, van phong, workshop",
+            "activity_description": "Cung cap set tea-break mini hoac ban ky gui."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Video quy trinh lam banh",
+            "activity_description": "Dung video me nho, crack cookie, dong hop de tang do hap dan."
+          }
+        ],
+        "tiem_nang_phat_trien": "Trung binh - Cao; co the mo rong sang set tea-break, hop qua banh va danh muc an vat theo mua."
+      }
+    },
+    {
+      "id": "I04",
+      "idea_name": "Granola va snack healthy dong goi",
+      "capital_band_code": "under_20m",
+      "capital_band_display": "Duoi 20 trieu VND",
+      "skill_tags": [
+        "Nau nuong/Pha che",
+        "Van hanh/Quan ly"
+      ],
+      "time_options": [
+        "Part-time",
+        "Full-time"
+      ],
+      "one_line_pitch": "Lam granola, hat rang vi va snack dong tui/hop nho cho nguoi an tien, dan van phong.",
+      "core_value": "Danh vao nhu cau an nhanh, de mang theo, nhin sach se va co cam giac lanh manh hon do an vat thong thuong.",
+      "customer_segments": [
+        "Nguoi di lam, nguoi quan tam an vat it toi loi",
+        "Khach nu 20 - 35 tuoi",
+        "Phong tap nho, quan cafe healthy, seller online"
+      ],
+      "differentiation": "Co the dong goi gon, mix nhieu vi, phoi qua tang; de ban theo tuan hoac theo combo buoi sang.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "12 - 20 trieu VND",
+        "startup_capital_range_vnd": [
+          12000000,
+          20000000
+        ],
+        "reference_price_display": "49.000 - 159.000 VND/tui hoac hu",
+        "main_costs": [
+          "Hat, yen mach, trai cay kho",
+          "Lo nuong/dung cu",
+          "Hu/tui zip",
+          "Tem nhan",
+          "Chi phi test vi"
+        ],
+        "implementation_difficulty": "Trung binh",
+        "staffing_needed": "1 nguoi giai doan dau"
+      },
+      "risks_and_challenges": [
+        "Can quan ly do gion, bao quan va han su dung",
+        "Gia von co the dao dong theo gia hat va nguyen lieu",
+        "Can noi ro thanh phan, trong luong va cach bao quan"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "Shopee, Facebook, Zalo",
+          "activity_description": "Ban theo tui, hu va combo dung thu 3 vi."
+        },
+        {
+          "model_type": "B2B nho",
+          "main_channel": "Phong gym, quan cafe, van phong",
+          "activity_description": "Ky gui hoac cung cap set an nhe."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Noi dung lifestyle",
+          "activity_description": "Tap trung thong diep gon, sach, tien mang di lam."
+        }
+      ],
+      "growth_potential": "Trung binh; co the di len subscription box an vat hoac set qua healthy.",
+      "quick_card": {
+        "title": "Granola va snack healthy dong goi",
+        "capital": "Duoi 20 trieu VND",
+        "skills": [
+          "Nau nuong/Pha che",
+          "Van hanh/Quan ly"
+        ],
+        "time": [
+          "Part-time",
+          "Full-time"
+        ],
+        "pitch": "Lam granola, hat rang vi va snack dong tui/hop nho cho nguoi an tien, dan van phong."
+      },
+      "detail_card": {
+        "cot_loi": "Danh vao nhu cau an nhanh, de mang theo, nhin sach se va co cam giac lanh manh hon do an vat thong thuong.",
+        "khach_hang": [
+          "Nguoi di lam, nguoi quan tam an vat it toi loi",
+          "Khach nu 20 - 35 tuoi",
+          "Phong tap nho, quan cafe healthy, seller online"
+        ],
+        "khac_biet": "Co the dong goi gon, mix nhieu vi, phoi qua tang; de ban theo tuan hoac theo combo buoi sang.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "12 - 20 trieu VND",
+          "startup_capital_range_vnd": [
+            12000000,
+            20000000
+          ],
+          "reference_price_display": "49.000 - 159.000 VND/tui hoac hu",
+          "main_costs": [
+            "Hat, yen mach, trai cay kho",
+            "Lo nuong/dung cu",
+            "Hu/tui zip",
+            "Tem nhan",
+            "Chi phi test vi"
+          ],
+          "implementation_difficulty": "Trung binh",
+          "staffing_needed": "1 nguoi giai doan dau"
+        },
+        "rui_ro_kho_khan": [
+          "Can quan ly do gion, bao quan va han su dung",
+          "Gia von co the dao dong theo gia hat va nguyen lieu",
+          "Can noi ro thanh phan, trong luong va cach bao quan"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "Shopee, Facebook, Zalo",
+            "activity_description": "Ban theo tui, hu va combo dung thu 3 vi."
+          },
+          {
+            "model_type": "B2B nho",
+            "main_channel": "Phong gym, quan cafe, van phong",
+            "activity_description": "Ky gui hoac cung cap set an nhe."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Noi dung lifestyle",
+            "activity_description": "Tap trung thong diep gon, sach, tien mang di lam."
+          }
+        ],
+        "tiem_nang_phat_trien": "Trung binh; co the di len subscription box an vat hoac set qua healthy."
+      }
+    },
+    {
+      "id": "I05",
+      "idea_name": "Set qua tang handmade mini",
+      "capital_band_code": "under_20m",
+      "capital_band_display": "Duoi 20 trieu VND",
+      "skill_tags": [
+        "Thiet ke/Sang tao",
+        "Dong goi",
+        "Marketing"
+      ],
+      "time_options": [
+        "Part-time",
+        "Full-time"
+      ],
+      "one_line_pitch": "Phoi hop nen, thiệp, keo, hoa sap, moc khoa thanh cac hop qua mini theo dip.",
+      "core_value": "Khong can tu san xuat 100% van tao gia tri bang concept, dong goi va ca nhan hoa thong diep.",
+      "customer_segments": [
+        "Nguoi mua qua sinh nhat, ky niem, dip le",
+        "Hoc sinh, sinh vien, dan van phong mua qua ngan sach vua",
+        "Khach dat qua nhanh, muon san pham dep va tien"
+      ],
+      "differentiation": "Gia tri nam o cach phoi san pham, thong diep, mau sac, packaging va kha nang theo chu de.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "6 - 15 trieu VND",
+        "startup_capital_range_vnd": [
+          6000000,
+          15000000
+        ],
+        "reference_price_display": "99.000 - 499.000 VND/set",
+        "main_costs": [
+          "Vat lieu hop qua",
+          "Phu kien qua tang dau vao",
+          "Ribbon, giay goi",
+          "Thiệp, in an",
+          "Chup anh san pham"
+        ],
+        "implementation_difficulty": "Thap",
+        "staffing_needed": "1 nguoi; them nguoi dong goi mua cao diem"
+      },
+      "risks_and_challenges": [
+        "Phu thuoc mua vu va dip le",
+        "De bi copy mau neu diem khac biet chi nam o hinh anh",
+        "Can quan ly ton kho nhieu mon nho"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "Facebook, Instagram, TikTok",
+          "activity_description": "Ban theo concept dip le va set ngan sach."
+        },
+        {
+          "model_type": "Nhan dat theo yeu cau",
+          "main_channel": "Zalo, DM",
+          "activity_description": "Ca nhan hoa thong diep, ten nguoi nhan, mau sac."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Video unbox",
+          "activity_description": "Day manh video mo hop, canh dong goi va thong diep ca nhan."
+        }
+      ],
+      "growth_potential": "Cao neu co gu tham my va kenh noi dung tot; co the mo rong sang qua doanh nghiep va combo theo mua.",
+      "quick_card": {
+        "title": "Set qua tang handmade mini",
+        "capital": "Duoi 20 trieu VND",
+        "skills": [
+          "Thiet ke/Sang tao",
+          "Dong goi",
+          "Marketing"
+        ],
+        "time": [
+          "Part-time",
+          "Full-time"
+        ],
+        "pitch": "Phoi hop nen, thiệp, keo, hoa sap, moc khoa thanh cac hop qua mini theo dip."
+      },
+      "detail_card": {
+        "cot_loi": "Khong can tu san xuat 100% van tao gia tri bang concept, dong goi va ca nhan hoa thong diep.",
+        "khach_hang": [
+          "Nguoi mua qua sinh nhat, ky niem, dip le",
+          "Hoc sinh, sinh vien, dan van phong mua qua ngan sach vua",
+          "Khach dat qua nhanh, muon san pham dep va tien"
+        ],
+        "khac_biet": "Gia tri nam o cach phoi san pham, thong diep, mau sac, packaging va kha nang theo chu de.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "6 - 15 trieu VND",
+          "startup_capital_range_vnd": [
+            6000000,
+            15000000
+          ],
+          "reference_price_display": "99.000 - 499.000 VND/set",
+          "main_costs": [
+            "Vat lieu hop qua",
+            "Phu kien qua tang dau vao",
+            "Ribbon, giay goi",
+            "Thiệp, in an",
+            "Chup anh san pham"
+          ],
+          "implementation_difficulty": "Thap",
+          "staffing_needed": "1 nguoi; them nguoi dong goi mua cao diem"
+        },
+        "rui_ro_kho_khan": [
+          "Phu thuoc mua vu va dip le",
+          "De bi copy mau neu diem khac biet chi nam o hinh anh",
+          "Can quan ly ton kho nhieu mon nho"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "Facebook, Instagram, TikTok",
+            "activity_description": "Ban theo concept dip le va set ngan sach."
+          },
+          {
+            "model_type": "Nhan dat theo yeu cau",
+            "main_channel": "Zalo, DM",
+            "activity_description": "Ca nhan hoa thong diep, ten nguoi nhan, mau sac."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Video unbox",
+            "activity_description": "Day manh video mo hop, canh dong goi va thong diep ca nhan."
+          }
+        ],
+        "tiem_nang_phat_trien": "Cao neu co gu tham my va kenh noi dung tot; co the mo rong sang qua doanh nghiep va combo theo mua."
+      }
+    },
+    {
+      "id": "I06",
+      "idea_name": "Hoa kem nhung, hoa sap hoac hoa len",
+      "capital_band_code": "under_20m",
+      "capital_band_display": "Duoi 20 trieu VND",
+      "skill_tags": [
+        "Thu cong",
+        "Thiet ke/Sang tao",
+        "Quay chup/Marketing"
+      ],
+      "time_options": [
+        "Part-time",
+        "Full-time"
+      ],
+      "one_line_pitch": "Lam hoa handmade de ban le, lam bo hoa mini, hoa cam tay va set qua tang.",
+      "core_value": "Danh vao nhu cau qua tang ben dep, khong can bao quan nhu hoa tuoi va de ca nhan hoa mau sac.",
+      "customer_segments": [
+        "Khach mua qua sinh nhat, tot nghiep, 8/3, 20/10",
+        "Nguoi tre thich san pham dep de chup anh",
+        "Shop qua tang can nguon san pham ky gui"
+      ],
+      "differentiation": "De tao mau doc, bo chu de, them the chuc mung va combo voi qua tang khac.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "5 - 12 trieu VND",
+        "startup_capital_range_vnd": [
+          5000000,
+          12000000
+        ],
+        "reference_price_display": "25.000 - 150.000 VND/bong; 120.000 - 600.000 VND/bo",
+        "main_costs": [
+          "Kem nhung/len/hoa sap",
+          "Que, keo, giay goi",
+          "Ribbon",
+          "Bao bi",
+          "Dung cu thu cong"
+        ],
+        "implementation_difficulty": "Thap - Trung binh",
+        "staffing_needed": "1 nguoi"
+      },
+      "risks_and_challenges": [
+        "Ton nhieu thoi gian neu lam mau qua cau ky",
+        "Phu thuoc xu huong mau va mau hoa",
+        "Can chuan hoa mau ban chay de de nhan don"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "TikTok, Facebook, Instagram",
+          "activity_description": "Ban le tung bo va nhan dat theo mau."
+        },
+        {
+          "model_type": "Ket hop",
+          "main_channel": "Hop qua, qua tang",
+          "activity_description": "Ban kem nen, thiệp, chocolate nho."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Video can tay",
+          "activity_description": "Quay quy trinh tao bong hoa va canh goi bo de tang tinh thu hut."
+        }
+      ],
+      "growth_potential": "Trung binh - Cao; co the mo rong sang workshop lam hoa va bo qua tang cao cap.",
+      "quick_card": {
+        "title": "Hoa kem nhung, hoa sap hoac hoa len",
+        "capital": "Duoi 20 trieu VND",
+        "skills": [
+          "Thu cong",
+          "Thiet ke/Sang tao",
+          "Quay chup/Marketing"
+        ],
+        "time": [
+          "Part-time",
+          "Full-time"
+        ],
+        "pitch": "Lam hoa handmade de ban le, lam bo hoa mini, hoa cam tay va set qua tang."
+      },
+      "detail_card": {
+        "cot_loi": "Danh vao nhu cau qua tang ben dep, khong can bao quan nhu hoa tuoi va de ca nhan hoa mau sac.",
+        "khach_hang": [
+          "Khach mua qua sinh nhat, tot nghiep, 8/3, 20/10",
+          "Nguoi tre thich san pham dep de chup anh",
+          "Shop qua tang can nguon san pham ky gui"
+        ],
+        "khac_biet": "De tao mau doc, bo chu de, them the chuc mung va combo voi qua tang khac.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "5 - 12 trieu VND",
+          "startup_capital_range_vnd": [
+            5000000,
+            12000000
+          ],
+          "reference_price_display": "25.000 - 150.000 VND/bong; 120.000 - 600.000 VND/bo",
+          "main_costs": [
+            "Kem nhung/len/hoa sap",
+            "Que, keo, giay goi",
+            "Ribbon",
+            "Bao bi",
+            "Dung cu thu cong"
+          ],
+          "implementation_difficulty": "Thap - Trung binh",
+          "staffing_needed": "1 nguoi"
+        },
+        "rui_ro_kho_khan": [
+          "Ton nhieu thoi gian neu lam mau qua cau ky",
+          "Phu thuoc xu huong mau va mau hoa",
+          "Can chuan hoa mau ban chay de de nhan don"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "TikTok, Facebook, Instagram",
+            "activity_description": "Ban le tung bo va nhan dat theo mau."
+          },
+          {
+            "model_type": "Ket hop",
+            "main_channel": "Hop qua, qua tang",
+            "activity_description": "Ban kem nen, thiệp, chocolate nho."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Video can tay",
+            "activity_description": "Quay quy trinh tao bong hoa va canh goi bo de tang tinh thu hut."
+          }
+        ],
+        "tiem_nang_phat_trien": "Trung binh - Cao; co the mo rong sang workshop lam hoa va bo qua tang cao cap."
+      }
+    },
+    {
+      "id": "I07",
+      "idea_name": "Moc khoa, charm va phu kien nho handmade",
+      "capital_band_code": "under_20m",
+      "capital_band_display": "Duoi 20 trieu VND",
+      "skill_tags": [
+        "Thu cong",
+        "Thiet ke/Sang tao",
+        "Marketing"
+      ],
+      "time_options": [
+        "Part-time"
+      ],
+      "one_line_pitch": "Lam moc khoa, charm dien thoai, phu kien treo tui, vong tay mini de ban online.",
+      "core_value": "Gia tri nam o tinh xinh, de mua, de tang ban be, de ban theo trend va ten ca nhan.",
+      "customer_segments": [
+        "Hoc sinh, sinh vien, nguoi tre",
+        "Khach mua qua nho ngan sach thap",
+        "Nguoi thich phu kien de trang tri tui va dien thoai"
+      ],
+      "differentiation": "De test mau moi nhanh, de them ten, ky tu, hinh icon va concept theo trend.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "4 - 10 trieu VND",
+        "startup_capital_range_vnd": [
+          4000000,
+          10000000
+        ],
+        "reference_price_display": "19.000 - 99.000 VND/san pham; 99.000 - 249.000 VND/combo",
+        "main_costs": [
+          "Hat, charm, khoa, day",
+          "Resin hoac vat lieu thu cong",
+          "Bao bi nho",
+          "Tem nhan",
+          "Chi phi test mau"
+        ],
+        "implementation_difficulty": "Thap",
+        "staffing_needed": "1 nguoi"
+      },
+      "risks_and_challenges": [
+        "Gia tri don hang thap neu khong co combo",
+        "De bi canh tranh boi san pham gia re nhap san",
+        "Can kiem soat ton kho nhieu mau nho"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "TikTok Shop, Shopee",
+          "activity_description": "Ban tung san pham nho va combo 2-5 mon."
+        },
+        {
+          "model_type": "Flash sale",
+          "main_channel": "Livestream, video ngan",
+          "activity_description": "Day manh ban theo trend va ten rieng."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Noi dung trend",
+          "activity_description": "Quay video tay lam, mix charm va thanh pham."
+        }
+      ],
+      "growth_potential": "Trung binh; hop nhat khi di theo mo hinh content + trend + ca nhan hoa.",
+      "quick_card": {
+        "title": "Moc khoa, charm va phu kien nho handmade",
+        "capital": "Duoi 20 trieu VND",
+        "skills": [
+          "Thu cong",
+          "Thiet ke/Sang tao",
+          "Marketing"
+        ],
+        "time": [
+          "Part-time"
+        ],
+        "pitch": "Lam moc khoa, charm dien thoai, phu kien treo tui, vong tay mini de ban online."
+      },
+      "detail_card": {
+        "cot_loi": "Gia tri nam o tinh xinh, de mua, de tang ban be, de ban theo trend va ten ca nhan.",
+        "khach_hang": [
+          "Hoc sinh, sinh vien, nguoi tre",
+          "Khach mua qua nho ngan sach thap",
+          "Nguoi thich phu kien de trang tri tui va dien thoai"
+        ],
+        "khac_biet": "De test mau moi nhanh, de them ten, ky tu, hinh icon va concept theo trend.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "4 - 10 trieu VND",
+          "startup_capital_range_vnd": [
+            4000000,
+            10000000
+          ],
+          "reference_price_display": "19.000 - 99.000 VND/san pham; 99.000 - 249.000 VND/combo",
+          "main_costs": [
+            "Hat, charm, khoa, day",
+            "Resin hoac vat lieu thu cong",
+            "Bao bi nho",
+            "Tem nhan",
+            "Chi phi test mau"
+          ],
+          "implementation_difficulty": "Thap",
+          "staffing_needed": "1 nguoi"
+        },
+        "rui_ro_kho_khan": [
+          "Gia tri don hang thap neu khong co combo",
+          "De bi canh tranh boi san pham gia re nhap san",
+          "Can kiem soat ton kho nhieu mau nho"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "TikTok Shop, Shopee",
+            "activity_description": "Ban tung san pham nho va combo 2-5 mon."
+          },
+          {
+            "model_type": "Flash sale",
+            "main_channel": "Livestream, video ngan",
+            "activity_description": "Day manh ban theo trend va ten rieng."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Noi dung trend",
+            "activity_description": "Quay video tay lam, mix charm va thanh pham."
+          }
+        ],
+        "tiem_nang_phat_trien": "Trung binh; hop nhat khi di theo mo hinh content + trend + ca nhan hoa."
+      }
+    },
+    {
+      "id": "I08",
+      "idea_name": "Thiep noi, scrapbook va album qua tang ca nhan hoa",
+      "capital_band_code": "under_20m",
+      "capital_band_display": "Duoi 20 trieu VND",
+      "skill_tags": [
+        "Thiet ke/Sang tao",
+        "Thu cong",
+        "Ca nhan hoa"
+      ],
+      "time_options": [
+        "Part-time"
+      ],
+      "one_line_pitch": "Lam thiep, scrapbook, album mini theo yeu cau sinh nhat, ky niem, tot nghiep.",
+      "core_value": "Gia tri cam xuc cao, phu hop khach muon mon qua co noi dung ca nhan va khong dai tra.",
+      "customer_segments": [
+        "Cap doi, hoc sinh, sinh vien",
+        "Nguoi mua qua ky niem, sinh nhat, tot nghiep",
+        "Khach thich mon qua tu tay va co thong diep rieng"
+      ],
+      "differentiation": "Ca nhan hoa rat sau theo anh, loi nhan, mau sac, ky niem va cau chuyen cua nguoi mua.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "3 - 8 trieu VND",
+        "startup_capital_range_vnd": [
+          3000000,
+          8000000
+        ],
+        "reference_price_display": "49.000 - 350.000 VND/san pham",
+        "main_costs": [
+          "Giay, sticker, ribbon",
+          "Keo, dung cu cat",
+          "Phu kien trang tri",
+          "Bao bi",
+          "In anh neu co"
+        ],
+        "implementation_difficulty": "Trung binh",
+        "staffing_needed": "1 nguoi"
+      },
+      "risks_and_challenges": [
+        "Kho scale neu phu thuoc nhieu vao don dat rieng",
+        "Ton thoi gian trao doi yeu cau va chinh sua",
+        "Can ky nang trinh bay va bo cuc tot"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Nhan dat theo yeu cau",
+          "main_channel": "Facebook, Instagram, Zalo",
+          "activity_description": "Nhan don theo su kien va gu cua khach."
+        },
+        {
+          "model_type": "Ban mau san",
+          "main_channel": "Shopee, TikTok",
+          "activity_description": "Ban mot so mau co san de quay vong don nhanh."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Nhat ky qua tang",
+          "activity_description": "Dung noi dung ke chuyen, before-after va unbox."
+        }
+      ],
+      "growth_potential": "Trung binh; co the mo rong sang gift box, wedding card va memory box.",
+      "quick_card": {
+        "title": "Thiep noi, scrapbook va album qua tang ca nhan hoa",
+        "capital": "Duoi 20 trieu VND",
+        "skills": [
+          "Thiet ke/Sang tao",
+          "Thu cong",
+          "Ca nhan hoa"
+        ],
+        "time": [
+          "Part-time"
+        ],
+        "pitch": "Lam thiep, scrapbook, album mini theo yeu cau sinh nhat, ky niem, tot nghiep."
+      },
+      "detail_card": {
+        "cot_loi": "Gia tri cam xuc cao, phu hop khach muon mon qua co noi dung ca nhan va khong dai tra.",
+        "khach_hang": [
+          "Cap doi, hoc sinh, sinh vien",
+          "Nguoi mua qua ky niem, sinh nhat, tot nghiep",
+          "Khach thich mon qua tu tay va co thong diep rieng"
+        ],
+        "khac_biet": "Ca nhan hoa rat sau theo anh, loi nhan, mau sac, ky niem va cau chuyen cua nguoi mua.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "3 - 8 trieu VND",
+          "startup_capital_range_vnd": [
+            3000000,
+            8000000
+          ],
+          "reference_price_display": "49.000 - 350.000 VND/san pham",
+          "main_costs": [
+            "Giay, sticker, ribbon",
+            "Keo, dung cu cat",
+            "Phu kien trang tri",
+            "Bao bi",
+            "In anh neu co"
+          ],
+          "implementation_difficulty": "Trung binh",
+          "staffing_needed": "1 nguoi"
+        },
+        "rui_ro_kho_khan": [
+          "Kho scale neu phu thuoc nhieu vao don dat rieng",
+          "Ton thoi gian trao doi yeu cau va chinh sua",
+          "Can ky nang trinh bay va bo cuc tot"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Nhan dat theo yeu cau",
+            "main_channel": "Facebook, Instagram, Zalo",
+            "activity_description": "Nhan don theo su kien va gu cua khach."
+          },
+          {
+            "model_type": "Ban mau san",
+            "main_channel": "Shopee, TikTok",
+            "activity_description": "Ban mot so mau co san de quay vong don nhanh."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Nhat ky qua tang",
+            "activity_description": "Dung noi dung ke chuyen, before-after va unbox."
+          }
+        ],
+        "tiem_nang_phat_trien": "Trung binh; co the mo rong sang gift box, wedding card va memory box."
+      }
+    },
+    {
+      "id": "I09",
+      "idea_name": "Decor ban hoc va ban lam viec handmade",
+      "capital_band_code": "under_20m",
+      "capital_band_display": "Duoi 20 trieu VND",
+      "skill_tags": [
+        "Thiet ke/Sang tao",
+        "DIY",
+        "Marketing"
+      ],
+      "time_options": [
+        "Part-time",
+        "Full-time"
+      ],
+      "one_line_pitch": "Lam khay nho, bang note, hop but, khung anh mini va do decor goc hoc tap.",
+      "core_value": "Danh vao nhu cau lam dep goc hoc tap/goc lam viec bang cac mon nho, de mua, de phoi theo set.",
+      "customer_segments": [
+        "Hoc sinh, sinh vien, dan van phong",
+        "Nguoi thich setup goc hoc tap",
+        "Nguoi mua qua nho cho ban be"
+      ],
+      "differentiation": "De ban theo bo dong mau, concept hoc tap, concept ban lam viec va co the them ten.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "8 - 18 trieu VND",
+        "startup_capital_range_vnd": [
+          8000000,
+          18000000
+        ],
+        "reference_price_display": "39.000 - 299.000 VND/san pham; 149.000 - 599.000 VND/set",
+        "main_costs": [
+          "Vat lieu go/nhua/giay",
+          "Dung cu DIY",
+          "Mau sac",
+          "Bao bi",
+          "Chi phi chup anh"
+        ],
+        "implementation_difficulty": "Trung binh",
+        "staffing_needed": "1 - 2 nguoi"
+      },
+      "risks_and_challenges": [
+        "Can su dong bo ve thiet ke neu ban theo bo",
+        "Mot so san pham co the ton cho va ton cong lam",
+        "Can kiem soat kich thuoc va do hoan thien de dong nhat"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "TikTok Shop, Instagram, Shopee",
+          "activity_description": "Ban tung mon va bo setup theo concept."
+        },
+        {
+          "model_type": "Ban combo",
+          "main_channel": "Noi dung room setup",
+          "activity_description": "Ban theo truoc-sau cua goc hoc tap, goc lam viec."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Video setup desk",
+          "activity_description": "Tap trung video trang tri ban va cach phoi bo."
+        }
+      ],
+      "growth_potential": "Trung binh - Cao; co the len thanh brand decor hoc tap nho.",
+      "quick_card": {
+        "title": "Decor ban hoc va ban lam viec handmade",
+        "capital": "Duoi 20 trieu VND",
+        "skills": [
+          "Thiet ke/Sang tao",
+          "DIY",
+          "Marketing"
+        ],
+        "time": [
+          "Part-time",
+          "Full-time"
+        ],
+        "pitch": "Lam khay nho, bang note, hop but, khung anh mini va do decor goc hoc tap."
+      },
+      "detail_card": {
+        "cot_loi": "Danh vao nhu cau lam dep goc hoc tap/goc lam viec bang cac mon nho, de mua, de phoi theo set.",
+        "khach_hang": [
+          "Hoc sinh, sinh vien, dan van phong",
+          "Nguoi thich setup goc hoc tap",
+          "Nguoi mua qua nho cho ban be"
+        ],
+        "khac_biet": "De ban theo bo dong mau, concept hoc tap, concept ban lam viec va co the them ten.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "8 - 18 trieu VND",
+          "startup_capital_range_vnd": [
+            8000000,
+            18000000
+          ],
+          "reference_price_display": "39.000 - 299.000 VND/san pham; 149.000 - 599.000 VND/set",
+          "main_costs": [
+            "Vat lieu go/nhua/giay",
+            "Dung cu DIY",
+            "Mau sac",
+            "Bao bi",
+            "Chi phi chup anh"
+          ],
+          "implementation_difficulty": "Trung binh",
+          "staffing_needed": "1 - 2 nguoi"
+        },
+        "rui_ro_kho_khan": [
+          "Can su dong bo ve thiet ke neu ban theo bo",
+          "Mot so san pham co the ton cho va ton cong lam",
+          "Can kiem soat kich thuoc va do hoan thien de dong nhat"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "TikTok Shop, Instagram, Shopee",
+            "activity_description": "Ban tung mon va bo setup theo concept."
+          },
+          {
+            "model_type": "Ban combo",
+            "main_channel": "Noi dung room setup",
+            "activity_description": "Ban theo truoc-sau cua goc hoc tap, goc lam viec."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Video setup desk",
+            "activity_description": "Tap trung video trang tri ban va cach phoi bo."
+          }
+        ],
+        "tiem_nang_phat_trien": "Trung binh - Cao; co the len thanh brand decor hoc tap nho."
+      }
+    },
+    {
+      "id": "I10",
+      "idea_name": "Gia vi va sot nha lam dong hu",
+      "capital_band_code": "under_20m",
+      "capital_band_display": "Duoi 20 trieu VND",
+      "skill_tags": [
+        "Nau nuong/Pha che",
+        "Van hanh/Quan ly"
+      ],
+      "time_options": [
+        "Part-time",
+        "Full-time"
+      ],
+      "one_line_pitch": "Lam muoi cham, sa te, sot uop, hanh phi toi phi dong hu de ban cho khach noi tro va dan van phong.",
+      "core_value": "San pham thuc dung, de ban lai, de test nhanh trong tap khach quen neu vi on dinh.",
+      "customer_segments": [
+        "Noi tro, dan van phong, nguoi song mot minh",
+        "Nguoi thich nau an nhanh va tien",
+        "Shop do an, seller online can gia vi kem"
+      ],
+      "differentiation": "Co the di theo vi dac trung, set gia vi theo mon an, dong hu gon sach va de tang kem.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "10 - 18 trieu VND",
+        "startup_capital_range_vnd": [
+          10000000,
+          18000000
+        ],
+        "reference_price_display": "35.000 - 129.000 VND/hu",
+        "main_costs": [
+          "Nguyen lieu chinh",
+          "Hu/thung dong goi",
+          "Nhan tem",
+          "Dung cu nau",
+          "Chi phi test vi va bao quan"
+        ],
+        "implementation_difficulty": "Trung binh",
+        "staffing_needed": "1 nguoi; them 1 nguoi dong goi neu don tang"
+      },
+      "risks_and_challenges": [
+        "Can chu y ve sinh, bao quan va han dung",
+        "Can test vi on dinh giua cac me",
+        "Can tranh claim cong dung qua muc"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "Facebook, Shopee, TikTok Shop",
+          "activity_description": "Ban le theo hu va combo 2-3 vi."
+        },
+        {
+          "model_type": "Cong tac vien",
+          "main_channel": "Khach quen, nhom noi tro",
+          "activity_description": "Ban qua kenh gioi thieu va review vi."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Video mon an",
+          "activity_description": "Ban kem video huong dan an voi mon gi, cham voi mon gi."
+        }
+      ],
+      "growth_potential": "Trung binh - Cao; co the mo rong sang set gia vi theo mon an, qua tang Tet va don B2B nho.",
+      "quick_card": {
+        "title": "Gia vi va sot nha lam dong hu",
+        "capital": "Duoi 20 trieu VND",
+        "skills": [
+          "Nau nuong/Pha che",
+          "Van hanh/Quan ly"
+        ],
+        "time": [
+          "Part-time",
+          "Full-time"
+        ],
+        "pitch": "Lam muoi cham, sa te, sot uop, hanh phi toi phi dong hu de ban cho khach noi tro va dan van phong."
+      },
+      "detail_card": {
+        "cot_loi": "San pham thuc dung, de ban lai, de test nhanh trong tap khach quen neu vi on dinh.",
+        "khach_hang": [
+          "Noi tro, dan van phong, nguoi song mot minh",
+          "Nguoi thich nau an nhanh va tien",
+          "Shop do an, seller online can gia vi kem"
+        ],
+        "khac_biet": "Co the di theo vi dac trung, set gia vi theo mon an, dong hu gon sach va de tang kem.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "10 - 18 trieu VND",
+          "startup_capital_range_vnd": [
+            10000000,
+            18000000
+          ],
+          "reference_price_display": "35.000 - 129.000 VND/hu",
+          "main_costs": [
+            "Nguyen lieu chinh",
+            "Hu/thung dong goi",
+            "Nhan tem",
+            "Dung cu nau",
+            "Chi phi test vi va bao quan"
+          ],
+          "implementation_difficulty": "Trung binh",
+          "staffing_needed": "1 nguoi; them 1 nguoi dong goi neu don tang"
+        },
+        "rui_ro_kho_khan": [
+          "Can chu y ve sinh, bao quan va han dung",
+          "Can test vi on dinh giua cac me",
+          "Can tranh claim cong dung qua muc"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "Facebook, Shopee, TikTok Shop",
+            "activity_description": "Ban le theo hu va combo 2-3 vi."
+          },
+          {
+            "model_type": "Cong tac vien",
+            "main_channel": "Khach quen, nhom noi tro",
+            "activity_description": "Ban qua kenh gioi thieu va review vi."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Video mon an",
+            "activity_description": "Ban kem video huong dan an voi mon gi, cham voi mon gi."
+          }
+        ],
+        "tiem_nang_phat_trien": "Trung binh - Cao; co the mo rong sang set gia vi theo mon an, qua tang Tet va don B2B nho."
+      }
+    },
+    {
+      "id": "I11",
+      "idea_name": "Xuong qua tang ca nhan hoa mini",
+      "capital_band_code": "from_20_to_50m",
+      "capital_band_display": "20 - 50 trieu VND",
+      "skill_tags": [
+        "Thiet ke/Sang tao",
+        "Van hanh/Quan ly",
+        "Marketing"
+      ],
+      "time_options": [
+        "Part-time",
+        "Full-time"
+      ],
+      "one_line_pitch": "Lam coc in ten, khung anh, so tay, hop qua va cac mon qua tang co ten/chu de rieng.",
+      "core_value": "Ban gia tri ca nhan hoa cho qua tang, su kien nho va don dat theo concept, thay vi chi ban tung san pham roi rac.",
+      "customer_segments": [
+        "Khach mua qua sinh nhat, tot nghiep, ky niem",
+        "Lop hoc, CLB, workshop, doanh nghiep nho can qua event",
+        "Nguoi mua mon qua co ten, logo, thong diep rieng"
+      ],
+      "differentiation": "Co the ly giai gia cao hon nhho kha nang tuy bien ten, thong diep, bo concept va dong bo nhieu mon trong 1 set.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "25 - 45 trieu VND",
+        "startup_capital_range_vnd": [
+          25000000,
+          45000000
+        ],
+        "reference_price_display": "79.000 - 299.000 VND/san pham; 250.000 - 900.000 VND/set",
+        "main_costs": [
+          "May in/dung cu ca nhan hoa co ban",
+          "Phoi san pham",
+          "Bao bi",
+          "Mau test",
+          "Chi phi chup anh va marketing"
+        ],
+        "implementation_difficulty": "Trung binh",
+        "staffing_needed": "1 - 2 nguoi giai doan dau"
+      },
+      "risks_and_challenges": [
+        "Can quy trinh xu ly file dat hang ro rang de tranh sai ten, sai noi dung",
+        "Ton kho phois neu danh muc qua rong",
+        "Can kiem soat tien do vao mua cao diem"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "Facebook, TikTok, Website nho",
+          "activity_description": "Nhan don qua tang ca nhan va set theo ngan sach."
+        },
+        {
+          "model_type": "B2B nho",
+          "main_channel": "Workshop, truong hoc, CLB, cong ty nho",
+          "activity_description": "Nhan don so luong vua cho event va ky niem."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Noi dung before-after",
+          "activity_description": "Quay quy trinh chuyen tu file ten/loi nhan sang thanh pham that."
+        }
+      ],
+      "growth_potential": "Cao; de mo rong sang gift set doanh nghiep, qua su kien, qua tri an theo mua.",
+      "quick_card": {
+        "title": "Xuong qua tang ca nhan hoa mini",
+        "capital": "20 - 50 trieu VND",
+        "skills": [
+          "Thiet ke/Sang tao",
+          "Van hanh/Quan ly",
+          "Marketing"
+        ],
+        "time": [
+          "Part-time",
+          "Full-time"
+        ],
+        "pitch": "Lam coc in ten, khung anh, so tay, hop qua va cac mon qua tang co ten/chu de rieng."
+      },
+      "detail_card": {
+        "cot_loi": "Ban gia tri ca nhan hoa cho qua tang, su kien nho va don dat theo concept, thay vi chi ban tung san pham roi rac.",
+        "khach_hang": [
+          "Khach mua qua sinh nhat, tot nghiep, ky niem",
+          "Lop hoc, CLB, workshop, doanh nghiep nho can qua event",
+          "Nguoi mua mon qua co ten, logo, thong diep rieng"
+        ],
+        "khac_biet": "Co the ly giai gia cao hon nhho kha nang tuy bien ten, thong diep, bo concept va dong bo nhieu mon trong 1 set.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "25 - 45 trieu VND",
+          "startup_capital_range_vnd": [
+            25000000,
+            45000000
+          ],
+          "reference_price_display": "79.000 - 299.000 VND/san pham; 250.000 - 900.000 VND/set",
+          "main_costs": [
+            "May in/dung cu ca nhan hoa co ban",
+            "Phoi san pham",
+            "Bao bi",
+            "Mau test",
+            "Chi phi chup anh va marketing"
+          ],
+          "implementation_difficulty": "Trung binh",
+          "staffing_needed": "1 - 2 nguoi giai doan dau"
+        },
+        "rui_ro_kho_khan": [
+          "Can quy trinh xu ly file dat hang ro rang de tranh sai ten, sai noi dung",
+          "Ton kho phois neu danh muc qua rong",
+          "Can kiem soat tien do vao mua cao diem"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "Facebook, TikTok, Website nho",
+            "activity_description": "Nhan don qua tang ca nhan va set theo ngan sach."
+          },
+          {
+            "model_type": "B2B nho",
+            "main_channel": "Workshop, truong hoc, CLB, cong ty nho",
+            "activity_description": "Nhan don so luong vua cho event va ky niem."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Noi dung before-after",
+            "activity_description": "Quay quy trinh chuyen tu file ten/loi nhan sang thanh pham that."
+          }
+        ],
+        "tiem_nang_phat_trien": "Cao; de mo rong sang gift set doanh nghiep, qua su kien, qua tri an theo mua."
+      }
+    },
+    {
+      "id": "I12",
+      "idea_name": "Bep banh va do an vat homemade quy mo nho",
+      "capital_band_code": "from_20_to_50m",
+      "capital_band_display": "20 - 50 trieu VND",
+      "skill_tags": [
+        "Nau nuong/Pha che",
+        "Van hanh/Quan ly"
+      ],
+      "time_options": [
+        "Full-time",
+        "Part-time"
+      ],
+      "one_line_pitch": "Phat trien tu banh quy/snack nho thanh bep mini co menu ro, dong goi ro va ban deu.",
+      "core_value": "Khong chi ban san pham le ma huong den don lap lai hang tuan, tea-break nho va don cho van phong.",
+      "customer_segments": [
+        "Dan van phong, hoc sinh, sinh vien",
+        "Quan cafe, workshop, lop hoc nho",
+        "Khach dat tea-break 10 - 50 nguoi"
+      ],
+      "differentiation": "Co the di theo menu it nhung chac, ngon va dong goi sach; tao gia tri bang su on dinh thay vi qua nhieu mon.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "25 - 50 trieu VND",
+        "startup_capital_range_vnd": [
+          25000000,
+          50000000
+        ],
+        "reference_price_display": "20.000 - 55.000 VND/phan; 250.000 - 2.000.000 VND/don nho",
+        "main_costs": [
+          "Thiet bi bep",
+          "Nguyen lieu",
+          "Bao bi",
+          "Dung cu dong goi",
+          "Chi phi giao hang/chup anh"
+        ],
+        "implementation_difficulty": "Trung binh",
+        "staffing_needed": "1 - 2 nguoi; co the them cong tac vien dong goi"
+      },
+      "risks_and_challenges": [
+        "Can quy trinh ve sinh, bao quan va len ke hoach san xuat",
+        "De qua tai vao khung gio cao diem neu nhan don le + don tea-break cung luc",
+        "Can quan ly that thoat va hang ton"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "ShopeeFood, Facebook, Zalo",
+          "activity_description": "Ban don le theo menu trong ngay."
+        },
+        {
+          "model_type": "B2B nho",
+          "main_channel": "Van phong, workshop, lop hoc",
+          "activity_description": "Nhan don tea-break, snack box, mini buffet."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Review vi + canh dong hop",
+          "activity_description": "Tap trung noi dung tao cam giac sach, ngon, de dat."
+        }
+      ],
+      "growth_potential": "Cao neu xay duoc tap khach lap lai; co the len thanh thuong hieu snack hoac tea-break mini.",
+      "quick_card": {
+        "title": "Bep banh va do an vat homemade quy mo nho",
+        "capital": "20 - 50 trieu VND",
+        "skills": [
+          "Nau nuong/Pha che",
+          "Van hanh/Quan ly"
+        ],
+        "time": [
+          "Full-time",
+          "Part-time"
+        ],
+        "pitch": "Phat trien tu banh quy/snack nho thanh bep mini co menu ro, dong goi ro va ban deu."
+      },
+      "detail_card": {
+        "cot_loi": "Khong chi ban san pham le ma huong den don lap lai hang tuan, tea-break nho va don cho van phong.",
+        "khach_hang": [
+          "Dan van phong, hoc sinh, sinh vien",
+          "Quan cafe, workshop, lop hoc nho",
+          "Khach dat tea-break 10 - 50 nguoi"
+        ],
+        "khac_biet": "Co the di theo menu it nhung chac, ngon va dong goi sach; tao gia tri bang su on dinh thay vi qua nhieu mon.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "25 - 50 trieu VND",
+          "startup_capital_range_vnd": [
+            25000000,
+            50000000
+          ],
+          "reference_price_display": "20.000 - 55.000 VND/phan; 250.000 - 2.000.000 VND/don nho",
+          "main_costs": [
+            "Thiet bi bep",
+            "Nguyen lieu",
+            "Bao bi",
+            "Dung cu dong goi",
+            "Chi phi giao hang/chup anh"
+          ],
+          "implementation_difficulty": "Trung binh",
+          "staffing_needed": "1 - 2 nguoi; co the them cong tac vien dong goi"
+        },
+        "rui_ro_kho_khan": [
+          "Can quy trinh ve sinh, bao quan va len ke hoach san xuat",
+          "De qua tai vao khung gio cao diem neu nhan don le + don tea-break cung luc",
+          "Can quan ly that thoat va hang ton"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "ShopeeFood, Facebook, Zalo",
+            "activity_description": "Ban don le theo menu trong ngay."
+          },
+          {
+            "model_type": "B2B nho",
+            "main_channel": "Van phong, workshop, lop hoc",
+            "activity_description": "Nhan don tea-break, snack box, mini buffet."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Review vi + canh dong hop",
+            "activity_description": "Tap trung noi dung tao cam giac sach, ngon, de dat."
+          }
+        ],
+        "tiem_nang_phat_trien": "Cao neu xay duoc tap khach lap lai; co the len thanh thuong hieu snack hoac tea-break mini."
+      }
+    },
+    {
+      "id": "I13",
+      "idea_name": "Xuong nen thom, tinh dau va qua decor",
+      "capital_band_code": "from_20_to_50m",
+      "capital_band_display": "20 - 50 trieu VND",
+      "skill_tags": [
+        "Pha che",
+        "Thiet ke/Sang tao",
+        "Marketing"
+      ],
+      "time_options": [
+        "Part-time",
+        "Full-time"
+      ],
+      "one_line_pitch": "Nang cap tu nen le thanh bo san pham mui huong va decor de tang gia tri don hang.",
+      "core_value": "Ban ca trai nghiem mui huong va su thu gian trong khong gian song, khong chi mot cay nen don le.",
+      "customer_segments": [
+        "Nguoi tre, dan van phong, nguoi thich decor",
+        "Khach mua qua tang co gu",
+        "Shop decor va shop qua tang"
+      ],
+      "differentiation": "Co bo mui dong bo, hop qua dong bo va kha nang di theo concept mua, concept phong, concept su kien.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "22 - 40 trieu VND",
+        "startup_capital_range_vnd": [
+          22000000,
+          40000000
+        ],
+        "reference_price_display": "79.000 - 399.000 VND/san pham; 299.000 - 890.000 VND/combo",
+        "main_costs": [
+          "Nguyen lieu mui huong",
+          "Ly/hop/bo qua",
+          "Dung cu pha che",
+          "Tem nhan",
+          "Anh/video san pham"
+        ],
+        "implementation_difficulty": "Trung binh",
+        "staffing_needed": "1 - 2 nguoi"
+      },
+      "risks_and_challenges": [
+        "Can co quy trinh test mui va luu cong thuc on dinh",
+        "De mat tien vao qua nhieu SKU neu phat trien danh muc nhanh",
+        "Can xay hinh anh thuong hieu de tranh canh tranh gia"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "Instagram, TikTok Shop, Shopee",
+          "activity_description": "Ban tung dong mui va tung combo theo dip."
+        },
+        {
+          "model_type": "Hop tac",
+          "main_channel": "Shop decor, homestay, qua tang",
+          "activity_description": "Ky gui hoac dong nhan rieng so luong nho."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Noi dung thi giac",
+          "activity_description": "Dung video set-up khong gian, canh thap nen, unbox."
+        }
+      ],
+      "growth_potential": "Cao; co the mo rong sang diffusers, room spray, gift box, workshop mui huong.",
+      "quick_card": {
+        "title": "Xuong nen thom, tinh dau va qua decor",
+        "capital": "20 - 50 trieu VND",
+        "skills": [
+          "Pha che",
+          "Thiet ke/Sang tao",
+          "Marketing"
+        ],
+        "time": [
+          "Part-time",
+          "Full-time"
+        ],
+        "pitch": "Nang cap tu nen le thanh bo san pham mui huong va decor de tang gia tri don hang."
+      },
+      "detail_card": {
+        "cot_loi": "Ban ca trai nghiem mui huong va su thu gian trong khong gian song, khong chi mot cay nen don le.",
+        "khach_hang": [
+          "Nguoi tre, dan van phong, nguoi thich decor",
+          "Khach mua qua tang co gu",
+          "Shop decor va shop qua tang"
+        ],
+        "khac_biet": "Co bo mui dong bo, hop qua dong bo va kha nang di theo concept mua, concept phong, concept su kien.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "22 - 40 trieu VND",
+          "startup_capital_range_vnd": [
+            22000000,
+            40000000
+          ],
+          "reference_price_display": "79.000 - 399.000 VND/san pham; 299.000 - 890.000 VND/combo",
+          "main_costs": [
+            "Nguyen lieu mui huong",
+            "Ly/hop/bo qua",
+            "Dung cu pha che",
+            "Tem nhan",
+            "Anh/video san pham"
+          ],
+          "implementation_difficulty": "Trung binh",
+          "staffing_needed": "1 - 2 nguoi"
+        },
+        "rui_ro_kho_khan": [
+          "Can co quy trinh test mui va luu cong thuc on dinh",
+          "De mat tien vao qua nhieu SKU neu phat trien danh muc nhanh",
+          "Can xay hinh anh thuong hieu de tranh canh tranh gia"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "Instagram, TikTok Shop, Shopee",
+            "activity_description": "Ban tung dong mui va tung combo theo dip."
+          },
+          {
+            "model_type": "Hop tac",
+            "main_channel": "Shop decor, homestay, qua tang",
+            "activity_description": "Ky gui hoac dong nhan rieng so luong nho."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Noi dung thi giac",
+            "activity_description": "Dung video set-up khong gian, canh thap nen, unbox."
+          }
+        ],
+        "tiem_nang_phat_trien": "Cao; co the mo rong sang diffusers, room spray, gift box, workshop mui huong."
+      }
+    },
+    {
+      "id": "I14",
+      "idea_name": "Thuong hieu phu kien handmade va phu kien thoi trang nho",
+      "capital_band_code": "from_20_to_50m",
+      "capital_band_display": "20 - 50 trieu VND",
+      "skill_tags": [
+        "Thiet ke/Sang tao",
+        "Quay chup/Marketing"
+      ],
+      "time_options": [
+        "Part-time",
+        "Full-time"
+      ],
+      "one_line_pitch": "Lam khuyen tai, kep toc, vong tay, charm tui theo bo suu tap nho va theo trend.",
+      "core_value": "Danh vao nhu cau phu kien dep, gia vua, thay doi theo outfit va xu huong.",
+      "customer_segments": [
+        "Nu 16 - 30 tuoi",
+        "Hoc sinh, sinh vien, nhan vien van phong",
+        "Khach mua qua nho, phu kien mix do"
+      ],
+      "differentiation": "The manh nam o bo suu tap, concept va hinh anh; de doi trend nhanh hon cac mo hinh san xuat lon.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "20 - 35 trieu VND",
+        "startup_capital_range_vnd": [
+          20000000,
+          35000000
+        ],
+        "reference_price_display": "39.000 - 299.000 VND/san pham; 149.000 - 599.000 VND/combo",
+        "main_costs": [
+          "Vat lieu phu kien",
+          "Mau test",
+          "Bao bi",
+          "Anh/video",
+          "Ton kho bo suu tap"
+        ],
+        "implementation_difficulty": "Thap - Trung binh",
+        "staffing_needed": "1 - 2 nguoi"
+      },
+      "risks_and_challenges": [
+        "Phu thuoc manh vao trend va toc do ra mau moi",
+        "Ton kho mau ban cham",
+        "Can hinh anh va gu tham my ro rang moi de ban gia tot"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "TikTok Shop, Shopee, Instagram",
+          "activity_description": "Ban tung mon va set mix-san."
+        },
+        {
+          "model_type": "Cong tac vien",
+          "main_channel": "Shop thoi trang nho, KOC nho",
+          "activity_description": "Day san pham qua nguoi mac thu va quay outfit."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Video mix do",
+          "activity_description": "Tap trung cach phoi phu kien theo outfit va mood."
+        }
+      ],
+      "growth_potential": "Trung binh - Cao; co the mo rong sang pop-up, collab voi shop quan ao va dong qua tang.",
+      "quick_card": {
+        "title": "Thuong hieu phu kien handmade va phu kien thoi trang nho",
+        "capital": "20 - 50 trieu VND",
+        "skills": [
+          "Thiet ke/Sang tao",
+          "Quay chup/Marketing"
+        ],
+        "time": [
+          "Part-time",
+          "Full-time"
+        ],
+        "pitch": "Lam khuyen tai, kep toc, vong tay, charm tui theo bo suu tap nho va theo trend."
+      },
+      "detail_card": {
+        "cot_loi": "Danh vao nhu cau phu kien dep, gia vua, thay doi theo outfit va xu huong.",
+        "khach_hang": [
+          "Nu 16 - 30 tuoi",
+          "Hoc sinh, sinh vien, nhan vien van phong",
+          "Khach mua qua nho, phu kien mix do"
+        ],
+        "khac_biet": "The manh nam o bo suu tap, concept va hinh anh; de doi trend nhanh hon cac mo hinh san xuat lon.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "20 - 35 trieu VND",
+          "startup_capital_range_vnd": [
+            20000000,
+            35000000
+          ],
+          "reference_price_display": "39.000 - 299.000 VND/san pham; 149.000 - 599.000 VND/combo",
+          "main_costs": [
+            "Vat lieu phu kien",
+            "Mau test",
+            "Bao bi",
+            "Anh/video",
+            "Ton kho bo suu tap"
+          ],
+          "implementation_difficulty": "Thap - Trung binh",
+          "staffing_needed": "1 - 2 nguoi"
+        },
+        "rui_ro_kho_khan": [
+          "Phu thuoc manh vao trend va toc do ra mau moi",
+          "Ton kho mau ban cham",
+          "Can hinh anh va gu tham my ro rang moi de ban gia tot"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "TikTok Shop, Shopee, Instagram",
+            "activity_description": "Ban tung mon va set mix-san."
+          },
+          {
+            "model_type": "Cong tac vien",
+            "main_channel": "Shop thoi trang nho, KOC nho",
+            "activity_description": "Day san pham qua nguoi mac thu va quay outfit."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Video mix do",
+            "activity_description": "Tap trung cach phoi phu kien theo outfit va mood."
+          }
+        ],
+        "tiem_nang_phat_trien": "Trung binh - Cao; co the mo rong sang pop-up, collab voi shop quan ao va dong qua tang."
+      }
+    },
+    {
+      "id": "I15",
+      "idea_name": "Cua hang hoa qua tang handmade theo set",
+      "capital_band_code": "from_20_to_50m",
+      "capital_band_display": "20 - 50 trieu VND",
+      "skill_tags": [
+        "Thiet ke/Sang tao",
+        "Van hanh/Quan ly",
+        "Marketing"
+      ],
+      "time_options": [
+        "Full-time",
+        "Part-time"
+      ],
+      "one_line_pitch": "Ban bo hoa handmade ket hop qua tang nho, thiệp, nen va phu kien thanh set hoan chinh.",
+      "core_value": "Gia tri khong nam o tung mon ma o toan bo set qua co chu de, mau sac va thong diep dong bo.",
+      "customer_segments": [
+        "Nguoi mua qua dip le, ky niem, tot nghiep",
+        "Cap doi, hoc sinh, sinh vien, dan van phong",
+        "Khach muon co qua dep nhung ngan sach van vua"
+      ],
+      "differentiation": "Loi the o concept hoa + qua tang + thong diep + dong goi, de tao gia tri cao hon hoa le.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "22 - 45 trieu VND",
+        "startup_capital_range_vnd": [
+          22000000,
+          45000000
+        ],
+        "reference_price_display": "149.000 - 990.000 VND/set",
+        "main_costs": [
+          "Vat lieu hoa",
+          "Qua tang dau vao",
+          "Hop qua va bao bi",
+          "Anh/video",
+          "Ton kho theo mua"
+        ],
+        "implementation_difficulty": "Trung binh",
+        "staffing_needed": "1 - 3 nguoi tuy mua vu"
+      },
+      "risks_and_challenges": [
+        "Mua vu ro net, doanh thu de lech theo dip le",
+        "Can quy trinh dong goi nhanh neu don tang dot bien",
+        "Can bo suu tap mau ban chay de de quan ly ton kho"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "Facebook, TikTok, Instagram",
+          "activity_description": "Ban theo bo co san va nhan dat theo tone mau."
+        },
+        {
+          "model_type": "B2B nho",
+          "main_channel": "Su kien nho, CLB, truong hoc",
+          "activity_description": "Nhan don tang theo so luong vua."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Video goi bo qua",
+          "activity_description": "Quay canh phoi mau, goi bo va mo hop qua."
+        }
+      ],
+      "growth_potential": "Cao neu xay dung duoc bo suu tap dip le va kenh content on dinh; co the len thuong hieu qua tang theo mua.",
+      "quick_card": {
+        "title": "Cua hang hoa qua tang handmade theo set",
+        "capital": "20 - 50 trieu VND",
+        "skills": [
+          "Thiet ke/Sang tao",
+          "Van hanh/Quan ly",
+          "Marketing"
+        ],
+        "time": [
+          "Full-time",
+          "Part-time"
+        ],
+        "pitch": "Ban bo hoa handmade ket hop qua tang nho, thiệp, nen va phu kien thanh set hoan chinh."
+      },
+      "detail_card": {
+        "cot_loi": "Gia tri khong nam o tung mon ma o toan bo set qua co chu de, mau sac va thong diep dong bo.",
+        "khach_hang": [
+          "Nguoi mua qua dip le, ky niem, tot nghiep",
+          "Cap doi, hoc sinh, sinh vien, dan van phong",
+          "Khach muon co qua dep nhung ngan sach van vua"
+        ],
+        "khac_biet": "Loi the o concept hoa + qua tang + thong diep + dong goi, de tao gia tri cao hon hoa le.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "22 - 45 trieu VND",
+          "startup_capital_range_vnd": [
+            22000000,
+            45000000
+          ],
+          "reference_price_display": "149.000 - 990.000 VND/set",
+          "main_costs": [
+            "Vat lieu hoa",
+            "Qua tang dau vao",
+            "Hop qua va bao bi",
+            "Anh/video",
+            "Ton kho theo mua"
+          ],
+          "implementation_difficulty": "Trung binh",
+          "staffing_needed": "1 - 3 nguoi tuy mua vu"
+        },
+        "rui_ro_kho_khan": [
+          "Mua vu ro net, doanh thu de lech theo dip le",
+          "Can quy trinh dong goi nhanh neu don tang dot bien",
+          "Can bo suu tap mau ban chay de de quan ly ton kho"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "Facebook, TikTok, Instagram",
+            "activity_description": "Ban theo bo co san va nhan dat theo tone mau."
+          },
+          {
+            "model_type": "B2B nho",
+            "main_channel": "Su kien nho, CLB, truong hoc",
+            "activity_description": "Nhan don tang theo so luong vua."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Video goi bo qua",
+            "activity_description": "Quay canh phoi mau, goi bo va mo hop qua."
+          }
+        ],
+        "tiem_nang_phat_trien": "Cao neu xay dung duoc bo suu tap dip le va kenh content on dinh; co the len thuong hieu qua tang theo mua."
+      }
+    },
+    {
+      "id": "I16",
+      "idea_name": "Xuong banh va do an vat dong goi co thuong hieu nho",
+      "capital_band_code": "over_50m",
+      "capital_band_display": "Tren 50 trieu VND",
+      "skill_tags": [
+        "Nau nuong/Pha che",
+        "Van hanh/Quan ly",
+        "Marketing"
+      ],
+      "time_options": [
+        "Full-time"
+      ],
+      "one_line_pitch": "Nang cap tu bep nho thanh mo hinh co menu on dinh, nhan dien rieng va kenh phan phoi rong hon.",
+      "core_value": "Tap trung vao su lap lai, tinh dong bo chat luong va kha nang ban so luong lon hon thay vi don le manh mun.",
+      "customer_segments": [
+        "Nguoi tieu dung mua lai dinh ky",
+        "Van phong, cafe, cua hang dac san nho",
+        "Dai ly/CTV ban do an vat"
+      ],
+      "differentiation": "Loi the nam o cong thuc on dinh, bao bi tot, nhan dien co he thong va kha nang phan phoi nho.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "60 - 150 trieu VND",
+        "startup_capital_range_vnd": [
+          60000000,
+          150000000
+        ],
+        "reference_price_display": "25.000 - 180.000 VND/san pham; 1.000.000 - 10.000.000 VND/don si nho",
+        "main_costs": [
+          "Thiet bi bep va dong goi",
+          "Nguyen lieu",
+          "Kho nho",
+          "Nhan dien va bao bi",
+          "Van chuyen, marketing"
+        ],
+        "implementation_difficulty": "Trung binh - Cao",
+        "staffing_needed": "2 - 4 nguoi giai doan dau"
+      },
+      "risks_and_challenges": [
+        "Can quy trinh san xuat, ton kho va giao nhan ro rang",
+        "Rui ro mat dong deu chat luong neu tang san luong nhanh",
+        "Can nguon don lap lai de goi dau tu co y nghia"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "TMĐT, social commerce, website",
+          "activity_description": "Day manh combo va san pham mua lap lai."
+        },
+        {
+          "model_type": "Ban si nho",
+          "main_channel": "Cafe, cua hang, van phong",
+          "activity_description": "Cung cap gia tot cho diem ban nho va don dinh ky."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Brand content + feedback",
+          "activity_description": "Xay thuong hieu nhin sach, dang tin va de mua lai."
+        }
+      ],
+      "growth_potential": "Cao neu chot duoc dong san pham chu luc; co the mo rong thanh thuong hieu snack/banh quy mo rong.",
+      "quick_card": {
+        "title": "Xuong banh va do an vat dong goi co thuong hieu nho",
+        "capital": "Tren 50 trieu VND",
+        "skills": [
+          "Nau nuong/Pha che",
+          "Van hanh/Quan ly",
+          "Marketing"
+        ],
+        "time": [
+          "Full-time"
+        ],
+        "pitch": "Nang cap tu bep nho thanh mo hinh co menu on dinh, nhan dien rieng va kenh phan phoi rong hon."
+      },
+      "detail_card": {
+        "cot_loi": "Tap trung vao su lap lai, tinh dong bo chat luong va kha nang ban so luong lon hon thay vi don le manh mun.",
+        "khach_hang": [
+          "Nguoi tieu dung mua lai dinh ky",
+          "Van phong, cafe, cua hang dac san nho",
+          "Dai ly/CTV ban do an vat"
+        ],
+        "khac_biet": "Loi the nam o cong thuc on dinh, bao bi tot, nhan dien co he thong va kha nang phan phoi nho.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "60 - 150 trieu VND",
+          "startup_capital_range_vnd": [
+            60000000,
+            150000000
+          ],
+          "reference_price_display": "25.000 - 180.000 VND/san pham; 1.000.000 - 10.000.000 VND/don si nho",
+          "main_costs": [
+            "Thiet bi bep va dong goi",
+            "Nguyen lieu",
+            "Kho nho",
+            "Nhan dien va bao bi",
+            "Van chuyen, marketing"
+          ],
+          "implementation_difficulty": "Trung binh - Cao",
+          "staffing_needed": "2 - 4 nguoi giai doan dau"
+        },
+        "rui_ro_kho_khan": [
+          "Can quy trinh san xuat, ton kho va giao nhan ro rang",
+          "Rui ro mat dong deu chat luong neu tang san luong nhanh",
+          "Can nguon don lap lai de goi dau tu co y nghia"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "TMĐT, social commerce, website",
+            "activity_description": "Day manh combo va san pham mua lap lai."
+          },
+          {
+            "model_type": "Ban si nho",
+            "main_channel": "Cafe, cua hang, van phong",
+            "activity_description": "Cung cap gia tot cho diem ban nho va don dinh ky."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Brand content + feedback",
+            "activity_description": "Xay thuong hieu nhin sach, dang tin va de mua lai."
+          }
+        ],
+        "tiem_nang_phat_trien": "Cao neu chot duoc dong san pham chu luc; co the mo rong thanh thuong hieu snack/banh quy mo rong."
+      }
+    },
+    {
+      "id": "I17",
+      "idea_name": "Xuong qua tang doanh nghiep nho",
+      "capital_band_code": "over_50m",
+      "capital_band_display": "Tren 50 trieu VND",
+      "skill_tags": [
+        "Van hanh/Quan ly",
+        "Thiet ke/Sang tao",
+        "Cham soc khach hang"
+      ],
+      "time_options": [
+        "Full-time"
+      ],
+      "one_line_pitch": "Lam gift set cho cong ty, su kien, workshop, tri an khach hang va qua Tet quy mo nho-den-vua.",
+      "core_value": "Khach hang tra tien cho tinh dong bo, dung han, in an theo yeu cau va kha nang gom nhieu mon thanh 1 set.",
+      "customer_segments": [
+        "Doanh nghiep nho va vua",
+        "Don vi giao duc, workshop, su kien",
+        "Agency can doi tac dong goi qua tang"
+      ],
+      "differentiation": "Khac biet o nang luc dong bo mau concept, logo, thong diep va xu ly don hang theo deadline.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "70 - 200 trieu VND",
+        "startup_capital_range_vnd": [
+          70000000,
+          200000000
+        ],
+        "reference_price_display": "150.000 - 1.500.000 VND/set; don B2B tu 5.000.000 VND tro len",
+        "main_costs": [
+          "Mau sample",
+          "Phoi qua tang",
+          "Kho nho",
+          "Bao bi",
+          "Van hanh don hang, nhan su"
+        ],
+        "implementation_difficulty": "Cao",
+        "staffing_needed": "2 - 5 nguoi; them nhan su thoi vu khi vao mua"
+      },
+      "risks_and_challenges": [
+        "Can quan ly deadine va chat luong rat chat",
+        "Doanh thu co the lech mua vu, dac biet dip Tet va cuoi nam",
+        "Can kha nang tu van concept va bao gia nhanh"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "B2B",
+          "main_channel": "Sales truc tiep, Zalo, email, networking",
+          "activity_description": "Chot don qua proposal, sample va bang gia."
+        },
+        {
+          "model_type": "Hop tac",
+          "main_channel": "Agency, don vi to chuc su kien",
+          "activity_description": "Nhan don gia cong set qua hoac dong thuong hieu chung."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Profile va case study",
+          "activity_description": "Dung bo mau da lam va concept da trien khai de chot don."
+        }
+      ],
+      "growth_potential": "Rat cao neu co pipeline khach doanh nghiep; co the mo rong kho, nha cung cap va team van hanh.",
+      "quick_card": {
+        "title": "Xuong qua tang doanh nghiep nho",
+        "capital": "Tren 50 trieu VND",
+        "skills": [
+          "Van hanh/Quan ly",
+          "Thiet ke/Sang tao",
+          "Cham soc khach hang"
+        ],
+        "time": [
+          "Full-time"
+        ],
+        "pitch": "Lam gift set cho cong ty, su kien, workshop, tri an khach hang va qua Tet quy mo nho-den-vua."
+      },
+      "detail_card": {
+        "cot_loi": "Khach hang tra tien cho tinh dong bo, dung han, in an theo yeu cau va kha nang gom nhieu mon thanh 1 set.",
+        "khach_hang": [
+          "Doanh nghiep nho va vua",
+          "Don vi giao duc, workshop, su kien",
+          "Agency can doi tac dong goi qua tang"
+        ],
+        "khac_biet": "Khac biet o nang luc dong bo mau concept, logo, thong diep va xu ly don hang theo deadline.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "70 - 200 trieu VND",
+          "startup_capital_range_vnd": [
+            70000000,
+            200000000
+          ],
+          "reference_price_display": "150.000 - 1.500.000 VND/set; don B2B tu 5.000.000 VND tro len",
+          "main_costs": [
+            "Mau sample",
+            "Phoi qua tang",
+            "Kho nho",
+            "Bao bi",
+            "Van hanh don hang, nhan su"
+          ],
+          "implementation_difficulty": "Cao",
+          "staffing_needed": "2 - 5 nguoi; them nhan su thoi vu khi vao mua"
+        },
+        "rui_ro_kho_khan": [
+          "Can quan ly deadine va chat luong rat chat",
+          "Doanh thu co the lech mua vu, dac biet dip Tet va cuoi nam",
+          "Can kha nang tu van concept va bao gia nhanh"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "B2B",
+            "main_channel": "Sales truc tiep, Zalo, email, networking",
+            "activity_description": "Chot don qua proposal, sample va bang gia."
+          },
+          {
+            "model_type": "Hop tac",
+            "main_channel": "Agency, don vi to chuc su kien",
+            "activity_description": "Nhan don gia cong set qua hoac dong thuong hieu chung."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Profile va case study",
+            "activity_description": "Dung bo mau da lam va concept da trien khai de chot don."
+          }
+        ],
+        "tiem_nang_phat_trien": "Rat cao neu co pipeline khach doanh nghiep; co the mo rong kho, nha cung cap va team van hanh."
+      }
+    },
+    {
+      "id": "I18",
+      "idea_name": "Xuong decor va phu kien noi that mini handmade",
+      "capital_band_code": "over_50m",
+      "capital_band_display": "Tren 50 trieu VND",
+      "skill_tags": [
+        "Thiet ke/Sang tao",
+        "Thu cong",
+        "Van hanh/Quan ly"
+      ],
+      "time_options": [
+        "Full-time"
+      ],
+      "one_line_pitch": "Lam den nho, khung tranh, ke mini, do decor phong ngu/phong hoc theo style ro rang.",
+      "core_value": "Danh vao nhu cau lam dep khong gian song bang san pham co thiet ke nho, de mua online, de phoi theo set.",
+      "customer_segments": [
+        "Nguoi tre setup phong, can ho nho, homestay nho",
+        "Khach mua qua tan gia, qua decor",
+        "Shop decor can nguon san pham"
+      ],
+      "differentiation": "Neu co mot style ro rang va bo suu tap dong bo, gia tri co the cao hon do decor roi rac thong thuong.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "60 - 180 trieu VND",
+        "startup_capital_range_vnd": [
+          60000000,
+          180000000
+        ],
+        "reference_price_display": "99.000 - 1.500.000 VND/san pham; 500.000 - 3.000.000 VND/set",
+        "main_costs": [
+          "Vat lieu decor",
+          "Dung cu gia cong",
+          "Kho/xuong nho",
+          "Bao bi chong vo",
+          "Chi phi chup bo canh"
+        ],
+        "implementation_difficulty": "Trung binh - Cao",
+        "staffing_needed": "2 - 4 nguoi"
+      },
+      "risks_and_challenges": [
+        "Ton cho, ton cong va ton kho hon san pham nho",
+        "Can quan ly van chuyen de tranh vo, tray xuoc",
+        "Can style ro rang de khong bi dan trai"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "Website, Shopee, Instagram",
+          "activity_description": "Ban tung mon decor va bo san pham theo phong cach."
+        },
+        {
+          "model_type": "Hop tac",
+          "main_channel": "Homestay, shop decor, KOL nho",
+          "activity_description": "Setup bo san pham mau va ky gui."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Anh lifestyle, room tour",
+          "activity_description": "Ban bang hinh anh khong gian that, phoi canh that."
+        }
+      ],
+      "growth_potential": "Cao neu co phong cach ro; co the mo rong sang set-up khong gian, don collab decor theo chu de.",
+      "quick_card": {
+        "title": "Xuong decor va phu kien noi that mini handmade",
+        "capital": "Tren 50 trieu VND",
+        "skills": [
+          "Thiet ke/Sang tao",
+          "Thu cong",
+          "Van hanh/Quan ly"
+        ],
+        "time": [
+          "Full-time"
+        ],
+        "pitch": "Lam den nho, khung tranh, ke mini, do decor phong ngu/phong hoc theo style ro rang."
+      },
+      "detail_card": {
+        "cot_loi": "Danh vao nhu cau lam dep khong gian song bang san pham co thiet ke nho, de mua online, de phoi theo set.",
+        "khach_hang": [
+          "Nguoi tre setup phong, can ho nho, homestay nho",
+          "Khach mua qua tan gia, qua decor",
+          "Shop decor can nguon san pham"
+        ],
+        "khac_biet": "Neu co mot style ro rang va bo suu tap dong bo, gia tri co the cao hon do decor roi rac thong thuong.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "60 - 180 trieu VND",
+          "startup_capital_range_vnd": [
+            60000000,
+            180000000
+          ],
+          "reference_price_display": "99.000 - 1.500.000 VND/san pham; 500.000 - 3.000.000 VND/set",
+          "main_costs": [
+            "Vat lieu decor",
+            "Dung cu gia cong",
+            "Kho/xuong nho",
+            "Bao bi chong vo",
+            "Chi phi chup bo canh"
+          ],
+          "implementation_difficulty": "Trung binh - Cao",
+          "staffing_needed": "2 - 4 nguoi"
+        },
+        "rui_ro_kho_khan": [
+          "Ton cho, ton cong va ton kho hon san pham nho",
+          "Can quan ly van chuyen de tranh vo, tray xuoc",
+          "Can style ro rang de khong bi dan trai"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "Website, Shopee, Instagram",
+            "activity_description": "Ban tung mon decor va bo san pham theo phong cach."
+          },
+          {
+            "model_type": "Hop tac",
+            "main_channel": "Homestay, shop decor, KOL nho",
+            "activity_description": "Setup bo san pham mau va ky gui."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Anh lifestyle, room tour",
+            "activity_description": "Ban bang hinh anh khong gian that, phoi canh that."
+          }
+        ],
+        "tiem_nang_phat_trien": "Cao neu co phong cach ro; co the mo rong sang set-up khong gian, don collab decor theo chu de."
+      }
+    },
+    {
+      "id": "I19",
+      "idea_name": "Xuong my pham thu cong co ban va san pham cham soc ca nhan handmade",
+      "capital_band_code": "over_50m",
+      "capital_band_display": "Tren 50 trieu VND",
+      "skill_tags": [
+        "Pha che",
+        "Kiem soat chat luong",
+        "Marketing"
+      ],
+      "time_options": [
+        "Full-time"
+      ],
+      "one_line_pitch": "Lam son duong, scrub, body butter, xa phong va cac san pham cham soc co ban theo huong thu cong.",
+      "core_value": "Danh vao tap khach thich san pham co cau chuyen, mui huong va trai nghiem ca nhan, nhung van can su on dinh va niem tin.",
+      "customer_segments": [
+        "Nu 18 - 35 tuoi",
+        "Nguoi quan tam qua tang cham soc ban than",
+        "Shop qua tang, spa mini, seller online"
+      ],
+      "differentiation": "Khac biet o concept mui huong, bo san pham dong bo va trai nghiem dong goi; tuy nhien can can trong ve thong tin san pham.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "80 - 200 trieu VND",
+        "startup_capital_range_vnd": [
+          80000000,
+          200000000
+        ],
+        "reference_price_display": "59.000 - 450.000 VND/san pham; 199.000 - 990.000 VND/set",
+        "main_costs": [
+          "Nguyen lieu va bao bi",
+          "Dung cu pha che",
+          "Mau thu nghiem",
+          "Nhan dien thuong hieu",
+          "Kiem soat chat luong/co so phap ly phu hop"
+        ],
+        "implementation_difficulty": "Cao",
+        "staffing_needed": "2 - 4 nguoi"
+      },
+      "risks_and_challenges": [
+        "Can than trong ve an toan, thong tin thanh phan va su phu hop phap ly",
+        "Rui ro ton kho neu phat trien qua nhieu dong san pham",
+        "Can xay niem tin thuong hieu manh hon nhieu nhom handmade khac"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban le",
+          "main_channel": "TMĐT, social, website",
+          "activity_description": "Ban tung san pham va bo cham soc theo mui/concept."
+        },
+        {
+          "model_type": "Hop tac",
+          "main_channel": "Spa mini, shop qua tang",
+          "activity_description": "Ky gui hoac dong nhan rieng so luong nho."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Noi dung thuong hieu + review",
+          "activity_description": "Tap trung vao trai nghiem, huong dan dung va feedback that."
+        }
+      ],
+      "growth_potential": "Cao neu giai quyet duoc bai toan niem tin va su on dinh; co the mo rong sang bo qua tang cham soc.",
+      "quick_card": {
+        "title": "Xuong my pham thu cong co ban va san pham cham soc ca nhan handmade",
+        "capital": "Tren 50 trieu VND",
+        "skills": [
+          "Pha che",
+          "Kiem soat chat luong",
+          "Marketing"
+        ],
+        "time": [
+          "Full-time"
+        ],
+        "pitch": "Lam son duong, scrub, body butter, xa phong va cac san pham cham soc co ban theo huong thu cong."
+      },
+      "detail_card": {
+        "cot_loi": "Danh vao tap khach thich san pham co cau chuyen, mui huong va trai nghiem ca nhan, nhung van can su on dinh va niem tin.",
+        "khach_hang": [
+          "Nu 18 - 35 tuoi",
+          "Nguoi quan tam qua tang cham soc ban than",
+          "Shop qua tang, spa mini, seller online"
+        ],
+        "khac_biet": "Khac biet o concept mui huong, bo san pham dong bo va trai nghiem dong goi; tuy nhien can can trong ve thong tin san pham.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "80 - 200 trieu VND",
+          "startup_capital_range_vnd": [
+            80000000,
+            200000000
+          ],
+          "reference_price_display": "59.000 - 450.000 VND/san pham; 199.000 - 990.000 VND/set",
+          "main_costs": [
+            "Nguyen lieu va bao bi",
+            "Dung cu pha che",
+            "Mau thu nghiem",
+            "Nhan dien thuong hieu",
+            "Kiem soat chat luong/co so phap ly phu hop"
+          ],
+          "implementation_difficulty": "Cao",
+          "staffing_needed": "2 - 4 nguoi"
+        },
+        "rui_ro_kho_khan": [
+          "Can than trong ve an toan, thong tin thanh phan va su phu hop phap ly",
+          "Rui ro ton kho neu phat trien qua nhieu dong san pham",
+          "Can xay niem tin thuong hieu manh hon nhieu nhom handmade khac"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban le",
+            "main_channel": "TMĐT, social, website",
+            "activity_description": "Ban tung san pham va bo cham soc theo mui/concept."
+          },
+          {
+            "model_type": "Hop tac",
+            "main_channel": "Spa mini, shop qua tang",
+            "activity_description": "Ky gui hoac dong nhan rieng so luong nho."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Noi dung thuong hieu + review",
+            "activity_description": "Tap trung vao trai nghiem, huong dan dung va feedback that."
+          }
+        ],
+        "tiem_nang_phat_trien": "Cao neu giai quyet duoc bai toan niem tin va su on dinh; co the mo rong sang bo qua tang cham soc."
+      }
+    },
+    {
+      "id": "I20",
+      "idea_name": "Mo hinh workshop ket hop ban kit DIY handmade",
+      "capital_band_code": "over_50m",
+      "capital_band_display": "Tren 50 trieu VND",
+      "skill_tags": [
+        "Thiet ke/Sang tao",
+        "Van hanh/Quan ly",
+        "Marketing"
+      ],
+      "time_options": [
+        "Full-time",
+        "Part-time"
+      ],
+      "one_line_pitch": "Ban trai nghiem lam do handmade tai cho hoac ban kit tu lam tai nha, ket hop ban thanh pham.",
+      "core_value": "Tao hai nguon thu: ban trai nghiem va ban kit/san pham; khach hang tra tien cho su vui, tinh thu gian va kha nang tu lam.",
+      "customer_segments": [
+        "Nguoi tre, cap doi, nhom ban, workshop team building nho",
+        "Khach mua qua tang trai nghiem",
+        "Nguoi khong gioi thu cong nhung muon thu lam"
+      ],
+      "differentiation": "Khac biet o viec ban mot trai nghiem hoan chinh, khong chi ban san pham; de tao noi dung va viral hon.",
+      "financial_analysis": {
+        "startup_capital_estimate_display": "60 - 150 trieu VND",
+        "startup_capital_range_vnd": [
+          60000000,
+          150000000
+        ],
+        "reference_price_display": "99.000 - 699.000 VND/kit; 150.000 - 800.000 VND/nguoi/workshop",
+        "main_costs": [
+          "Khong gian nho hoac setup workshop",
+          "Vat lieu kit",
+          "Dung cu dung chung",
+          "Nhan su huong dan",
+          "Marketing/noi dung"
+        ],
+        "implementation_difficulty": "Trung binh - Cao",
+        "staffing_needed": "2 - 4 nguoi"
+      },
+      "risks_and_challenges": [
+        "Can lich workshop deu hoac luong khach on dinh",
+        "Ton nhan su van hanh va phuc vu hon mo hinh chi ban hang",
+        "Can quy trinh kit ro rang de nguoi moi van lam duoc"
+      ],
+      "distribution_and_sales_strategy": [
+        {
+          "model_type": "Ban trai nghiem",
+          "main_channel": "Facebook, TikTok, booking qua Zalo/website",
+          "activity_description": "Ban lich workshop cuoi tuan, workshop dip le, workshop cap doi."
+        },
+        {
+          "model_type": "Ban kit",
+          "main_channel": "Shopee, TikTok Shop, IG",
+          "activity_description": "Ban kit tu lam tai nha co huong dan kem."
+        },
+        {
+          "model_type": "Kenh ban chinh",
+          "main_channel": "Video nguoi tham gia that",
+          "activity_description": "Dung UGC, clip trai nghiem va thanh pham sau workshop de hut khach."
+        }
+      ],
+      "growth_potential": "Rat cao neu xay duoc concept workshop ro; co the mo rong sang franchise nho, workshop doanh nghiep va event dip le.",
+      "quick_card": {
+        "title": "Mo hinh workshop ket hop ban kit DIY handmade",
+        "capital": "Tren 50 trieu VND",
+        "skills": [
+          "Thiet ke/Sang tao",
+          "Van hanh/Quan ly",
+          "Marketing"
+        ],
+        "time": [
+          "Full-time",
+          "Part-time"
+        ],
+        "pitch": "Ban trai nghiem lam do handmade tai cho hoac ban kit tu lam tai nha, ket hop ban thanh pham."
+      },
+      "detail_card": {
+        "cot_loi": "Tao hai nguon thu: ban trai nghiem va ban kit/san pham; khach hang tra tien cho su vui, tinh thu gian va kha nang tu lam.",
+        "khach_hang": [
+          "Nguoi tre, cap doi, nhom ban, workshop team building nho",
+          "Khach mua qua tang trai nghiem",
+          "Nguoi khong gioi thu cong nhung muon thu lam"
+        ],
+        "khac_biet": "Khac biet o viec ban mot trai nghiem hoan chinh, khong chi ban san pham; de tao noi dung va viral hon.",
+        "phan_tich_tai_chinh": {
+          "startup_capital_estimate_display": "60 - 150 trieu VND",
+          "startup_capital_range_vnd": [
+            60000000,
+            150000000
+          ],
+          "reference_price_display": "99.000 - 699.000 VND/kit; 150.000 - 800.000 VND/nguoi/workshop",
+          "main_costs": [
+            "Khong gian nho hoac setup workshop",
+            "Vat lieu kit",
+            "Dung cu dung chung",
+            "Nhan su huong dan",
+            "Marketing/noi dung"
+          ],
+          "implementation_difficulty": "Trung binh - Cao",
+          "staffing_needed": "2 - 4 nguoi"
+        },
+        "rui_ro_kho_khan": [
+          "Can lich workshop deu hoac luong khach on dinh",
+          "Ton nhan su van hanh va phuc vu hon mo hinh chi ban hang",
+          "Can quy trinh kit ro rang de nguoi moi van lam duoc"
+        ],
+        "chien_luoc_kenh_phan_phoi_ban_hang": [
+          {
+            "model_type": "Ban trai nghiem",
+            "main_channel": "Facebook, TikTok, booking qua Zalo/website",
+            "activity_description": "Ban lich workshop cuoi tuan, workshop dip le, workshop cap doi."
+          },
+          {
+            "model_type": "Ban kit",
+            "main_channel": "Shopee, TikTok Shop, IG",
+            "activity_description": "Ban kit tu lam tai nha co huong dan kem."
+          },
+          {
+            "model_type": "Kenh ban chinh",
+            "main_channel": "Video nguoi tham gia that",
+            "activity_description": "Dung UGC, clip trai nghiem va thanh pham sau workshop de hut khach."
+          }
+        ],
+        "tiem_nang_phat_trien": "Rat cao neu xay duoc concept workshop ro; co the mo rong sang franchise nho, workshop doanh nghiep va event dip le."
+      }
+    }
+  ]
+}
