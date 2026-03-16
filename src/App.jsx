@@ -64,26 +64,26 @@ const getIcon = (iconName, className) => {
 /* ----- Filter card config (matches code.html 3C colored cards) ----- */
 const filterCardConfig = {
   capital: {
-    bgCard: 'bg-blue-50',
-    bgSelected: 'bg-blue-600',
-    hoverBg: 'hover:bg-blue-100',
-    iconColor: 'text-blue-600',
+    bgCard: 'bg-emerald-50',
+    bgSelected: 'bg-emerald-600',
+    hoverBg: 'hover:bg-emerald-100',
+    iconColor: 'text-emerald-600',
     icon: <CreditCard className="w-7 h-7" />,
     label: '1. Vốn',
   },
   competence: {
-    bgCard: 'bg-orange-50',
-    bgSelected: 'bg-orange-600',
-    hoverBg: 'hover:bg-orange-100',
-    iconColor: 'text-orange-600',
+    bgCard: 'bg-green-50',
+    bgSelected: 'bg-green-600',
+    hoverBg: 'hover:bg-green-100',
+    iconColor: 'text-green-600',
     icon: <Brain className="w-7 h-7" />,
     label: '2. Năng lực',
   },
   time: {
-    bgCard: 'bg-purple-50',
-    bgSelected: 'bg-purple-600',
-    hoverBg: 'hover:bg-purple-100',
-    iconColor: 'text-purple-600',
+    bgCard: 'bg-teal-50',
+    bgSelected: 'bg-teal-600',
+    hoverBg: 'hover:bg-teal-100',
+    iconColor: 'text-teal-600',
     icon: <Timer className="w-7 h-7" />,
     label: '3. Thời gian',
   },
@@ -390,7 +390,7 @@ export default function App() {
           </div>
           <a
             href="#quiz"
-            className="rounded-lg bg-slate-900 px-5 py-2 text-sm font-semibold text-white hover:bg-slate-800 transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-900"
+            className="rounded-lg border border-[#16a738]/30 bg-[#16a738]/10 px-5 py-2 text-sm font-bold text-[#16a738] hover:bg-[#16a738]/15 transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#16a738]"
           >
             Tìm ý tưởng
           </a>
@@ -416,16 +416,15 @@ export default function App() {
               className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight mx-auto max-w-4xl mb-6"
               style={{ textWrap: 'balance' }}
             >
-              Nhập ý tưởng. Xem{' '}
-              <span className="text-[#16a738]">startup của bạn</span>{' '}
-              thành hiện thực.
+              Tìm{' '}
+              <span className="font-black text-[#16a738]">ý tưởng kinh doanh</span>{' '}
+              <span className="font-black text-[#16a738]">phù hợp</span>{' '}
+              với nguồn lực của bạn
             </h1>
 
             {/* Description */}
             <p className="text-lg sm:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed mb-10">
-              Trả lời 3 câu hỏi về{' '}
-              <strong className="text-slate-700">Vốn — Năng lực — Thời gian</strong>,
-              hệ thống gợi ý mô hình kinh doanh thực chiến kèm phân tích tài chính chi tiết.
+              Trả lời 3 câu hỏi về Vốn — Năng lực — Thời gian, hệ thống lọc ra mô hình kinh doanh thực tế kèm với phân tích chi tiết phù hợp với bạn
             </p>
 
             {/* CTA */}
@@ -474,7 +473,7 @@ export default function App() {
             <p className="font-bold text-slate-500">Khám phá ý tưởng phù hợp với nguồn lực của bạn</p>
           </div>
 
-          <div className="mx-auto max-w-6xl rounded-3xl border-2 border-slate-900 bg-white p-6 md:p-8 shadow-[6px_6px_0px_#111713]">
+          <div className="mx-auto max-w-6xl rounded-3xl border border-[#16a738]/20 bg-white/95 p-6 md:p-8 shadow-[0_18px_45px_-22px_rgba(22,167,56,0.45)] backdrop-blur">
             {quizStep === 'select' && (
               <>
                 <div className="mb-8 text-center">
@@ -486,10 +485,10 @@ export default function App() {
                   {quizQuestions.map((q) => {
                     const cfg = filterCardConfig[q.id];
                     return (
-                      <div
-                        key={q.id}
-                        className={`${cfg.bgCard} p-8 rounded-2xl flex flex-col min-h-[350px] border-2 border-slate-900 shadow-[4px_4px_0px_#111713] transition-all duration-200 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#111713]`}
-                      >
+                        <div
+                          key={q.id}
+                          className={`${cfg.bgCard} p-8 rounded-2xl flex flex-col min-h-[350px] border border-[#16a738]/20 shadow-[0_12px_24px_-18px_rgba(22,167,56,0.55)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_18px_32px_-18px_rgba(22,167,56,0.65)]`}
+                        >
                         <div className="flex items-center gap-3 mb-6">
                           <span className={cfg.iconColor}>{cfg.icon}</span>
                           <h4 className="text-2xl font-extrabold uppercase tracking-tighter">{cfg.label}</h4>
@@ -504,7 +503,7 @@ export default function App() {
                                   key={opt.value}
                                   type="button"
                                   onClick={() => handleFilterChange(q.id, opt.value)}
-                                  className={`flex flex-col items-center justify-center p-4 border-2 border-slate-900 rounded-xl cursor-pointer transition-colors text-center ${
+                                  className={`flex flex-col items-center justify-center p-4 border border-[#16a738]/30 rounded-xl cursor-pointer transition-colors text-center ${
                                     sel ? `${cfg.bgSelected} text-white` : `bg-white ${cfg.hoverBg}`
                                   }`}
                                 >
@@ -523,7 +522,7 @@ export default function App() {
                                   key={opt.value}
                                   type="button"
                                   onClick={() => handleFilterChange(q.id, opt.value)}
-                                  className={`flex items-center gap-3 w-full p-4 border-2 border-slate-900 rounded-xl cursor-pointer transition-colors text-left ${
+                                  className={`flex items-center gap-3 w-full p-4 border border-[#16a738]/30 rounded-xl cursor-pointer transition-colors text-left ${
                                     sel ? `${cfg.bgSelected} text-white` : `bg-white ${cfg.hoverBg}`
                                   }`}
                                 >
@@ -539,7 +538,7 @@ export default function App() {
                           <button
                             type="button"
                             onClick={() => handleFilterChange(q.id, filters[q.id])}
-                            className="mt-auto pt-4 text-xs font-bold text-slate-500 hover:text-red-500 transition-colors flex items-center gap-1"
+                            className="mt-auto pt-4 text-xs font-semibold text-[#0f6c24] hover:text-[#128a2e] transition-colors flex items-center gap-1"
                           >
                             <RotateCcw className="w-3 h-3" /> Bỏ chọn
                           </button>
@@ -567,7 +566,7 @@ export default function App() {
                     <button
                       type="button"
                       onClick={resetQuizSelections}
-                      className="border-2 border-slate-900 shadow-[3px_3px_0px_#111713] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none rounded-xl bg-white px-6 py-3 font-bold text-sm hover:bg-red-50 transition-all inline-flex items-center gap-2"
+                      className="rounded-xl border border-[#16a738]/35 bg-white px-6 py-3 text-sm font-bold text-[#0f6c24] shadow-[0_12px_24px_-16px_rgba(22,167,56,0.55)] transition-all hover:bg-[#16a738]/5 inline-flex items-center gap-2"
                     >
                       <RotateCcw className="w-4 h-4" /> Xóa lựa chọn
                     </button>
@@ -590,13 +589,13 @@ export default function App() {
                 </div>
 
                 <div className="mb-8 flex flex-wrap justify-center gap-2">
-                  <span className="rounded-full bg-blue-50 border border-blue-200 px-3 py-1 text-xs font-bold text-blue-700">
+                  <span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">
                     Vốn: {getSelectedOptionLabel('capital', filters.capital)}
                   </span>
-                  <span className="rounded-full bg-orange-50 border border-orange-200 px-3 py-1 text-xs font-bold text-orange-700">
+                  <span className="rounded-full border border-green-200 bg-green-50 px-3 py-1 text-xs font-bold text-green-700">
                     Năng lực: {getSelectedOptionLabel('competence', filters.competence)}
                   </span>
-                  <span className="rounded-full bg-purple-50 border border-purple-200 px-3 py-1 text-xs font-bold text-purple-700">
+                  <span className="rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-xs font-bold text-teal-700">
                     Thời gian: {getSelectedOptionLabel('time', filters.time)}
                   </span>
                 </div>
@@ -639,7 +638,7 @@ export default function App() {
                     <button
                       type="button"
                       onClick={() => setQuizStep('select')}
-                      className="rounded-xl border-2 border-slate-900 bg-white px-6 py-3 text-sm font-bold shadow-[3px_3px_0px_#111713] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+                      className="rounded-xl border border-[#16a738]/35 bg-white px-6 py-3 text-sm font-bold text-[#0f6c24] shadow-[0_12px_24px_-16px_rgba(22,167,56,0.55)] transition-all hover:bg-[#16a738]/5"
                     >
                       Quay lại
                     </button>
@@ -727,7 +726,7 @@ export default function App() {
                   <button
                     type="button"
                     onClick={resetQuizFlow}
-                    className="inline-flex items-center gap-2 rounded-xl border-2 border-slate-900 bg-white px-6 py-3 text-sm font-bold shadow-[3px_3px_0px_#111713] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+                    className="inline-flex items-center gap-2 rounded-xl border border-[#16a738]/35 bg-white px-6 py-3 text-sm font-bold text-[#0f6c24] shadow-[0_12px_24px_-16px_rgba(22,167,56,0.55)] transition-all hover:bg-[#16a738]/5"
                   >
                     <RotateCcw className="w-4 h-4" /> Làm lại bộ lọc
                   </button>
