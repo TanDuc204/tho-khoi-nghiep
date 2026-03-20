@@ -183,17 +183,60 @@ export default function App() {
   const lastIdeaIndex = Math.min(safeCurrentPage * ideasPerPage, filteredIdeas.length);
 
   const saveInsightToFirebase = async (answers, contactInfo, matchedIdeaIds) => {
-    if (!user) return;
-    try {
-      const ref = collection(db, 'artifacts', appId, 'users', user.uid, 'quiz_results');
-      await addDoc(ref, {
-        answers,
-        contactInfo,
-        matchedIdeaIds,
+    const isEmail = /\S+@\S+\.\S+/.test(contactInfo.contact);
+    let currentUser = auth.currentUser || user;
+
+    if (!currentUser) {
+      try {
+        const credential = await signInAnonymously(auth);
+        currentUser = credential.user;
+      } catch (error) {
+        console.error('Không thể xác thực ẩn danh trước khi lưu dữ liệu:', error);
+      }
+    }
+
+    const writeTasks = [];
+
+    if (currentUser) {
+      const insightRef = collection(db, 'artifacts', appId, 'users', currentUser.uid, 'quiz_results');
+      writeTasks.push(
+        addDoc(insightRef, {
+          answers,
+          contactInfo,
+          matchedIdeaIds,
+          createdAt: serverTimestamp(),
+          source: '3c_form_v2',
+        }),
+      );
+    }
+
+    const leadsRef = collection(db, 'artifacts', appId, 'public', 'data', 'leads');
+    writeTasks.push(
+      addDoc(leadsRef, {
+        name: contactInfo.name,
+        contactMethod: isEmail ? 'email' : 'zalo',
+        contactValue: contactInfo.contact,
+        location: contactInfo.city,
+        submittedAt: serverTimestamp(),
         createdAt: serverTimestamp(),
         source: '3c_form_v2',
-      });
-    } catch (e) { console.error('Lỗi khi lưu Insight:', e); }
+        stage: '',
+        topic: '',
+        clickedMagnet: false,
+        filters: answers,
+        matchedIdeaIds,
+        userId: currentUser?.uid || null,
+      }),
+    );
+
+    const results = await Promise.allSettled(writeTasks);
+    const failedWrites = results.filter((result) => result.status === 'rejected');
+    if (failedWrites.length === writeTasks.length) {
+      throw failedWrites[0].reason;
+    }
+    if (failedWrites.length > 0) {
+      console.error('Một số bản ghi Firebase không lưu được:', failedWrites);
+    }
   };
 
   const hasAllFiltersSelected = Boolean(filters.capital && filters.competence && filters.time);
@@ -317,9 +360,10 @@ export default function App() {
   const handleLeadInputChange = (field, value) => {
     setLeadForm((prev) => ({ ...prev, [field]: value }));
     setLeadErrors((prev) => {
-      if (!prev[field]) return prev;
+      if (!prev[field] && !prev.submit) return prev;
       const next = { ...prev };
       delete next[field];
+      delete next.submit;
       return next;
     });
   };
@@ -356,10 +400,20 @@ export default function App() {
     setQuizStep('processing');
     setIsSubmitting(true);
 
-    await Promise.allSettled([
+    const [saveResult] = await Promise.allSettled([
       saveInsightToFirebase(answers, trimmed, matchedIdeaIds),
       new Promise((resolve) => setTimeout(resolve, 1200)),
     ]);
+
+    if (saveResult.status === 'rejected') {
+      console.error('Lỗi khi lưu thông tin lead:', saveResult.reason);
+      setLeadErrors({
+        submit: 'Không thể lưu dữ liệu lúc này. Vui lòng kiểm tra kết nối và thử lại.',
+      });
+      setQuizStep('contact');
+      setIsSubmitting(false);
+      return;
+    }
 
     setTopIdeas(matchedIdeas);
     setQuizStep('results');
@@ -633,6 +687,12 @@ export default function App() {
                     />
                     {leadErrors.city && <p className="mt-1 text-xs font-medium text-red-500">{leadErrors.city}</p>}
                   </div>
+
+                  {leadErrors.submit && (
+                    <p className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm font-medium text-red-600">
+                      {leadErrors.submit}
+                    </p>
+                  )}
 
                   <div className="flex flex-wrap justify-center gap-3 pt-2">
                     <button
