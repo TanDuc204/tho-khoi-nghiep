@@ -14,4 +14,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
-export const appId = 'tho-khoi-nghiep-local';
+const configuredAppId = import.meta.env.VITE_APP_ID?.trim();
+export const appId = configuredAppId || firebaseConfig.projectId;
