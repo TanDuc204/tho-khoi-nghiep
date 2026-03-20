@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import {
   Wallet,
   Banknote,
@@ -89,6 +89,9 @@ const filterCardConfig = {
   },
 };
 
+const LEAD_QUEUE_STORAGE_KEY = `lead_submission_queue:${appId}`;
+const MAX_PENDING_LEADS = 200;
+
 /* --------------------------------------------------------------- */
 export default function App() {
   const initialFilters = { capital: null, competence: null, time: null };
@@ -111,7 +114,70 @@ export default function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [showComingSoon, setShowComingSoon] = useState(false);
+  const [pendingLeadCount, setPendingLeadCount] = useState(0);
   const shareToastTimeoutRef = useRef(null);
+  const syncInFlightRef = useRef(false);
+
+  const readLeadQueue = useCallback(() => {
+    if (typeof window === 'undefined') return [];
+    try {
+      const raw = window.localStorage.getItem(LEAD_QUEUE_STORAGE_KEY);
+      if (!raw) return [];
+      const parsed = JSON.parse(raw);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (error) {
+      console.error('Không thể đọc hàng đợi lưu lead từ localStorage:', error);
+      return [];
+    }
+  }, []);
+
+  const writeLeadQueue = useCallback((queue) => {
+    if (typeof window === 'undefined') return;
+    try {
+      window.localStorage.setItem(LEAD_QUEUE_STORAGE_KEY, JSON.stringify(queue));
+    } catch (error) {
+      console.error('Không thể ghi hàng đợi lưu lead vào localStorage:', error);
+    }
+  }, []);
+
+  const refreshPendingLeadCount = useCallback(() => {
+    const queue = readLeadQueue();
+    setPendingLeadCount(queue.length);
+  }, [readLeadQueue]);
+
+  const queueLeadSubmission = useCallback((payload) => {
+    const queuedItem = {
+      localId: `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`,
+      payload,
+      retryCount: 0,
+      createdAt: new Date().toISOString(),
+      lastError: '',
+    };
+    const nextQueue = [...readLeadQueue(), queuedItem].slice(-MAX_PENDING_LEADS);
+    writeLeadQueue(nextQueue);
+    setPendingLeadCount(nextQueue.length);
+    return queuedItem;
+  }, [readLeadQueue, writeLeadQueue]);
+
+  const markLeadSubmissionSynced = useCallback((localId) => {
+    const nextQueue = readLeadQueue().filter((item) => item.localId !== localId);
+    writeLeadQueue(nextQueue);
+    setPendingLeadCount(nextQueue.length);
+  }, [readLeadQueue, writeLeadQueue]);
+
+  const markLeadSubmissionFailed = useCallback((localId, error) => {
+    const nextQueue = readLeadQueue().map((item) => {
+      if (item.localId !== localId) return item;
+      return {
+        ...item,
+        retryCount: (item.retryCount || 0) + 1,
+        lastError: String(error?.message || error || 'Lỗi không xác định'),
+        lastAttemptAt: new Date().toISOString(),
+      };
+    });
+    writeLeadQueue(nextQueue);
+    setPendingLeadCount(nextQueue.length);
+  }, [readLeadQueue, writeLeadQueue]);
 
   /* -- Firebase auth -- */
   useEffect(() => {
@@ -182,7 +248,10 @@ export default function App() {
   const firstIdeaIndex = filteredIdeas.length === 0 ? 0 : (safeCurrentPage - 1) * ideasPerPage + 1;
   const lastIdeaIndex = Math.min(safeCurrentPage * ideasPerPage, filteredIdeas.length);
 
-  const saveInsightToFirebase = async (answers, contactInfo, matchedIdeaIds) => {
+  const saveInsightToFirebase = useCallback(async (answers, contactInfo, matchedIdeaIds) => {
+    if (!contactInfo?.contact || !contactInfo?.name || !contactInfo?.city) {
+      throw new Error('Payload lead không hợp lệ.');
+    }
     const isEmail = /\S+@\S+\.\S+/.test(contactInfo.contact);
     let currentUser = auth.currentUser || user;
 
@@ -200,44 +269,122 @@ export default function App() {
     if (currentUser) {
       const insightRef = collection(db, 'artifacts', appId, 'users', currentUser.uid, 'quiz_results');
       writeTasks.push(
-        addDoc(insightRef, {
-          answers,
-          contactInfo,
-          matchedIdeaIds,
-          createdAt: serverTimestamp(),
-          source: '3c_form_v2',
-        }),
+        {
+          key: 'insight',
+          promise: addDoc(insightRef, {
+            answers,
+            contactInfo,
+            matchedIdeaIds: Array.isArray(matchedIdeaIds) ? matchedIdeaIds : [],
+            createdAt: serverTimestamp(),
+            source: '3c_form_v2',
+          }),
+        },
       );
     }
 
     const leadsRef = collection(db, 'artifacts', appId, 'public', 'data', 'leads');
     writeTasks.push(
-      addDoc(leadsRef, {
-        name: contactInfo.name,
-        contactMethod: isEmail ? 'email' : 'zalo',
-        contactValue: contactInfo.contact,
-        location: contactInfo.city,
-        submittedAt: serverTimestamp(),
-        createdAt: serverTimestamp(),
-        source: '3c_form_v2',
-        stage: '',
-        topic: '',
-        clickedMagnet: false,
-        filters: answers,
-        matchedIdeaIds,
-        userId: currentUser?.uid || null,
-      }),
+      {
+        key: 'lead',
+        promise: addDoc(leadsRef, {
+          name: contactInfo.name,
+          contactMethod: isEmail ? 'email' : 'zalo',
+          contactValue: contactInfo.contact,
+          location: contactInfo.city,
+          submittedAt: serverTimestamp(),
+          createdAt: serverTimestamp(),
+          source: '3c_form_v2',
+          stage: '',
+          topic: '',
+          clickedMagnet: false,
+          filters: answers,
+          matchedIdeaIds: Array.isArray(matchedIdeaIds) ? matchedIdeaIds : [],
+          userId: currentUser?.uid || null,
+        }),
+      },
     );
 
-    const results = await Promise.allSettled(writeTasks);
-    const failedWrites = results.filter((result) => result.status === 'rejected');
-    if (failedWrites.length === writeTasks.length) {
-      throw failedWrites[0].reason;
+    const results = await Promise.allSettled(writeTasks.map((task) => task.promise));
+    const failedWrites = results
+      .map((result, index) => ({ ...result, key: writeTasks[index].key }))
+      .filter((result) => result.status === 'rejected');
+
+    const leadWriteError = failedWrites.find((result) => result.key === 'lead');
+    if (leadWriteError) {
+      throw leadWriteError.reason;
     }
-    if (failedWrites.length > 0) {
+
+    const insightWriteError = failedWrites.find((result) => result.key === 'insight');
+    if (insightWriteError) {
       console.error('Một số bản ghi Firebase không lưu được:', failedWrites);
     }
-  };
+  }, [user]);
+
+  const flushPendingLeadQueue = useCallback(async () => {
+    if (syncInFlightRef.current) return;
+    if (typeof window !== 'undefined' && window.navigator && !window.navigator.onLine) return;
+
+    const pendingQueue = readLeadQueue();
+    if (pendingQueue.length === 0) {
+      setPendingLeadCount(0);
+      return;
+    }
+
+    syncInFlightRef.current = true;
+    try {
+      for (const item of pendingQueue) {
+        try {
+          await saveInsightToFirebase(
+            item.payload?.answers,
+            item.payload?.contactInfo,
+            item.payload?.matchedIdeaIds,
+          );
+          markLeadSubmissionSynced(item.localId);
+        } catch (error) {
+          markLeadSubmissionFailed(item.localId, error);
+          const permissionDenied = error?.code === 'permission-denied' || /insufficient permissions/i.test(String(error?.message || ''));
+          if (permissionDenied) break;
+        }
+      }
+    } finally {
+      syncInFlightRef.current = false;
+      refreshPendingLeadCount();
+    }
+  }, [markLeadSubmissionFailed, markLeadSubmissionSynced, readLeadQueue, refreshPendingLeadCount, saveInsightToFirebase]);
+
+  useEffect(() => {
+    refreshPendingLeadCount();
+  }, [refreshPendingLeadCount]);
+
+  useEffect(() => {
+    const handleStorage = (event) => {
+      if (event.key === LEAD_QUEUE_STORAGE_KEY) {
+        refreshPendingLeadCount();
+      }
+    };
+    window.addEventListener('storage', handleStorage);
+    return () => window.removeEventListener('storage', handleStorage);
+  }, [refreshPendingLeadCount]);
+
+  useEffect(() => {
+    if (!user) return;
+    flushPendingLeadQueue();
+  }, [flushPendingLeadQueue, user]);
+
+  useEffect(() => {
+    const handleOnline = () => {
+      flushPendingLeadQueue();
+    };
+    window.addEventListener('online', handleOnline);
+    return () => window.removeEventListener('online', handleOnline);
+  }, [flushPendingLeadQueue]);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      flushPendingLeadQueue();
+    }, 30000);
+    return () => window.clearInterval(timer);
+  }, [flushPendingLeadQueue]);
 
   const hasAllFiltersSelected = Boolean(filters.capital && filters.competence && filters.time);
   const hasAnyFilterSelected = Boolean(filters.capital || filters.competence || filters.time);
@@ -394,6 +541,11 @@ export default function App() {
     const answers = { ...filters };
     const matchedIdeas = scoreIdeasByAnswers(answers).slice(0, 3);
     const matchedIdeaIds = matchedIdeas.map((idea) => idea.id);
+    const queuedLead = queueLeadSubmission({
+      answers,
+      contactInfo: trimmed,
+      matchedIdeaIds,
+    });
 
     setLeadErrors({});
     setLeadForm(trimmed);
@@ -407,14 +559,16 @@ export default function App() {
 
     if (saveResult.status === 'rejected') {
       console.error('Lỗi khi lưu thông tin lead:', saveResult.reason);
+      markLeadSubmissionFailed(queuedLead.localId, saveResult.reason);
       setLeadErrors({
-        submit: 'Không thể lưu dữ liệu lúc này. Vui lòng kiểm tra kết nối và thử lại.',
+        submit: 'Không thể gửi dữ liệu lúc này. Dữ liệu đã lưu tạm trên trình duyệt và sẽ tự đồng bộ lại.',
       });
       setQuizStep('contact');
       setIsSubmitting(false);
       return;
     }
 
+    markLeadSubmissionSynced(queuedLead.localId);
     setTopIdeas(matchedIdeas);
     setQuizStep('results');
     setIsSubmitting(false);
@@ -528,6 +682,12 @@ export default function App() {
           </div>
 
           <div className="mx-auto max-w-6xl rounded-3xl border border-[#16a738]/20 bg-white/95 p-6 md:p-8 shadow-[0_18px_45px_-22px_rgba(22,167,56,0.45)] backdrop-blur">
+            {pendingLeadCount > 0 && quizStep !== 'processing' && (
+              <div className="mb-6 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-800">
+                Có {pendingLeadCount} biểu mẫu đang lưu tạm và chờ đồng bộ lên hệ thống.
+              </div>
+            )}
+
             {quizStep === 'select' && (
               <>
                 <div className="mb-8 text-center">
