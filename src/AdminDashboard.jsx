@@ -23,14 +23,14 @@ import {
 const ADMIN_PASSWORD = 'tho.khoinghiep@';
 
 const QUESTION_LABELS = {
-  capital: 'Von',
-  competence: 'Nang luc',
-  time: 'Thoi gian',
+  capital: 'Vốn',
+  competence: 'Năng lực',
+  time: 'Thời gian',
 };
 
 const SOURCE_LABELS = {
   '3c_form_v2': 'Form 3C',
-  unknown: 'Khong ro',
+  unknown: 'Không rõ',
 };
 
 const CONTACT_METHOD_LABELS = {
@@ -145,7 +145,7 @@ const AdminDashboard = () => {
       setLoginError('');
       return;
     }
-    setLoginError('Sai mat khau. Vui long thu lai.');
+    setLoginError('Sai mật khẩu. Vui lòng thử lại.');
     setPassword('');
   };
 
@@ -174,7 +174,7 @@ const AdminDashboard = () => {
       setLeads(fetchedLeads);
     } catch (fetchError) {
       console.error(fetchError);
-      setError('Khong the tai du lieu. Kiem tra ket noi hoac quyen Firestore.');
+      setError('Không thể tải dữ liệu. Kiểm tra kết nối hoặc quyền Firestore.');
     } finally {
       setLoading(false);
     }
@@ -432,7 +432,7 @@ const AdminDashboard = () => {
                 onChange={(event) => setFilterContactMethod(event.target.value)}
                 className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:border-green-500"
               >
-                <option value="">Tat ca kenh lien he</option>
+                <option value="">Tất cả kênh liên hệ</option>
                 <option value="email">Email</option>
                 <option value="zalo">Zalo/SDT</option>
               </select>
@@ -442,7 +442,7 @@ const AdminDashboard = () => {
                 onChange={(event) => setFilterSource(event.target.value)}
                 className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:border-green-500"
               >
-                <option value="">Tat ca nguon</option>
+                <option value="">Tất cả nguồn</option>
                 <option value="3c_form_v2">Form 3C</option>
               </select>
 
@@ -451,7 +451,7 @@ const AdminDashboard = () => {
                 onChange={(event) => setFilterCapital(event.target.value)}
                 className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:border-green-500"
               >
-                <option value="">Tat ca muc von</option>
+                <option value="">Tất cả mức vốn</option>
                 {(quizQuestions.find((q) => q.id === 'capital')?.options || []).map((option) => (
                   <option key={option.value} value={option.value}>{option.label}</option>
                 ))}
@@ -466,14 +466,14 @@ const AdminDashboard = () => {
                   }}
                   className="text-sm text-red-500 hover:text-red-700 font-medium px-3 py-2"
                 >
-                  Xoa bo loc
+                  Xóa bộ lọc
                 </button>
               )}
             </div>
           )}
 
           <p className="text-xs text-gray-400 mt-3">
-            Hien thi <strong className="text-gray-600">{filtered.length}</strong> / {normalizedLeads.length} ket qua
+            Hiển thị <strong className="text-gray-600">{filtered.length}</strong> / {normalizedLeads.length} kết quả
           </p>
         </div>
 
@@ -484,14 +484,14 @@ const AdminDashboard = () => {
                 <tr className="bg-gray-50/80 border-b border-gray-100">
                   {[
                     { key: null, label: '#', sortable: false, width: 'w-12' },
-                    { key: 'name', label: 'Ho ten', sortable: true },
-                    { key: 'contactValue', label: 'Lien he', sortable: true, width: 'min-w-[300px]' },
-                    { key: 'contactMethod', label: 'Kenh', sortable: true },
-                    { key: 'location', label: 'Thanh pho', sortable: true },
+                    { key: 'name', label: 'Họ tên', sortable: true },
+                    { key: 'contactValue', label: 'Liên hệ', sortable: true, width: 'min-w-[300px]' },
+                    { key: 'contactMethod', label: 'Kênh', sortable: true },
+                    { key: 'location', label: 'Thành phố', sortable: true },
                     { key: null, label: '3C', sortable: false },
-                    { key: null, label: 'Y tuong goi y', sortable: false },
-                    { key: 'source', label: 'Nguon', sortable: true },
-                    { key: 'submittedAt', label: 'Ngay gui', sortable: true },
+                    { key: null, label: 'Ý tưởng gợi ý', sortable: false },
+                    { key: 'source', label: 'Nguồn', sortable: true },
+                    { key: 'submittedAt', label: 'Ngày gửi', sortable: true },
                   ].map((column) => (
                     <th
                       key={column.label}
@@ -513,14 +513,14 @@ const AdminDashboard = () => {
                     <td colSpan={9} className="text-center py-20">
                       <div className="inline-flex flex-col items-center gap-3 text-gray-400">
                         <RefreshCw className="w-6 h-6 animate-spin" />
-                        <span className="text-sm">Dang tai du lieu...</span>
+                        <span className="text-sm">Đang tải dữ liệu...</span>
                       </div>
                     </td>
                   </tr>
                 ) : !filtered.length ? (
                   <tr>
                     <td colSpan={9} className="text-center py-20 text-gray-400 text-sm">
-                      Khong co du lieu
+                      Không có dữ liệu
                     </td>
                   </tr>
                 ) : (
