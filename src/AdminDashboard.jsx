@@ -297,13 +297,13 @@ const AdminDashboard = () => {
                 <Lock className="w-8 h-8 text-green-600" />
               </div>
               <h1 className="text-xl font-bold text-gray-900">Admin Dashboard</h1>
-              <p className="text-sm text-gray-400 mt-1">Nhap mat khau de truy cap</p>
+              <p className="text-sm text-gray-400 mt-1">Nhập mật khẩu để truy cập</p>
             </div>
 
             <form onSubmit={handleLogin} className="space-y-4">
               <input
                 type="password"
-                placeholder="Mat khau"
+                placeholder="Mật khẩu"
                 className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all text-sm"
                 value={password}
                 onChange={(event) => {
@@ -323,12 +323,12 @@ const AdminDashboard = () => {
                 type="submit"
                 className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl shadow-lg shadow-green-600/30 transition-all flex items-center justify-center gap-2"
               >
-                <LogIn className="w-4 h-4" /> Dang nhap
+                <LogIn className="w-4 h-4" /> Đăng nhập
               </button>
             </form>
 
             <a href="/" className="block text-center text-xs text-gray-400 hover:text-green-600 mt-5 transition-colors">
-              ← Quay lai trang chu
+              ← Quay lại trang chủ
             </a>
           </div>
         </div>
@@ -485,7 +485,7 @@ const AdminDashboard = () => {
                   {[
                     { key: null, label: '#', sortable: false, width: 'w-12' },
                     { key: 'name', label: 'Ho ten', sortable: true },
-                    { key: 'contactValue', label: 'Lien he', sortable: true },
+                    { key: 'contactValue', label: 'Lien he', sortable: true, width: 'min-w-[300px]' },
                     { key: 'contactMethod', label: 'Kenh', sortable: true },
                     { key: 'location', label: 'Thanh pho', sortable: true },
                     { key: null, label: '3C', sortable: false },
@@ -528,7 +528,7 @@ const AdminDashboard = () => {
                     <tr key={lead.id} className="hover:bg-green-50/30 transition-colors align-top">
                       <td className="px-4 py-3 text-gray-400 text-xs font-mono">{index + 1}</td>
                       <td className="px-4 py-3 font-medium text-gray-900 max-w-[180px] whitespace-normal">{lead.name || '—'}</td>
-                      <td className="px-4 py-3 text-gray-700 max-w-[220px] break-all">{lead.contactValue || '—'}</td>
+                      <td className="px-4 py-3 text-gray-700 min-w-[300px] whitespace-nowrap">{lead.contactValue || '—'}</td>
                       <td className="px-4 py-3">
                         <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold ${lead.contactMethod === 'email' ? 'bg-blue-50 text-blue-700' : 'bg-green-50 text-green-700'}`}>
                           {CONTACT_METHOD_LABELS[lead.contactMethod] || lead.contactMethod || '—'}
