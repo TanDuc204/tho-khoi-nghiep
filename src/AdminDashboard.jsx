@@ -255,16 +255,16 @@ const AdminDashboard = () => {
   const exportToExcel = () => {
     const rows = filtered.map((lead, index) => ({
       '#': index + 1,
-      'Ho ten': lead.name || '',
-      'Lien he': lead.contactValue || '',
-      'Kenh': CONTACT_METHOD_LABELS[lead.contactMethod] || lead.contactMethod || '',
-      'Thanh pho': lead.location || '',
-      'Von': getFilterLabel('capital', lead.filters?.capital),
-      'Nang luc': getFilterLabel('competence', lead.filters?.competence),
-      'Thoi gian': getFilterLabel('time', lead.filters?.time),
-      'Y tuong goi y': lead.matchedIdeaTitles.join(' | '),
-      'Nguon': SOURCE_LABELS[lead.source] || lead.source || '',
-      'Ngay gui': formatSubmittedTime(lead),
+      'Họ tên': lead.name || '',
+      'Liên hệ': lead.contactValue || '',
+      'Kênh': CONTACT_METHOD_LABELS[lead.contactMethod] || lead.contactMethod || '',
+      'Thành phố': lead.location || '',
+      'Vốn': getFilterLabel('capital', lead.filters?.capital),
+      'Năng lực': getFilterLabel('competence', lead.filters?.competence),
+      'Thời gian': getFilterLabel('time', lead.filters?.time),
+      'Ý tưởng gợi ý': lead.matchedIdeaTitles.join(' | '),
+      'Nguồn': SOURCE_LABELS[lead.source] || lead.source || '',
+      'Ngày gửi': formatSubmittedTime(lead),
     }));
 
     const worksheet = XLSX.utils.json_to_sheet(rows);
@@ -339,8 +339,8 @@ const AdminDashboard = () => {
   const activeFilterCount = [filterContactMethod, filterSource, filterCapital].filter(Boolean).length;
 
   const statCards = [
-    { label: 'Tong leads', value: stats.total, icon: Users, color: 'blue' },
-    { label: 'Hom nay', value: stats.todayCount, icon: BarChart3, color: 'green' },
+    { label: 'Tổng leads', value: stats.total, icon: Users, color: 'blue' },
+    { label: 'Hôm nay', value: stats.todayCount, icon: BarChart3, color: 'green' },
     { label: 'Email', value: stats.emailCount, icon: Mail, color: 'amber' },
     { label: 'Zalo/SDT', value: stats.zaloCount, icon: MessageCircle, color: 'slate' },
   ];
@@ -357,7 +357,7 @@ const AdminDashboard = () => {
               <h1 className="text-lg font-bold text-gray-900 flex items-center gap-2">
                 <BarChart3 className="w-5 h-5 text-green-600" /> Dashboard Leads 3C
               </h1>
-              <p className="text-xs text-gray-400">Tho Khoi Nghiep - Du lieu tu form hien tai</p>
+              <p className="text-xs text-gray-400">Thợ Khởi Nghiệp - Dữ liệu từ form hiện tại</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -366,14 +366,14 @@ const AdminDashboard = () => {
               disabled={loading}
               className="inline-flex items-center gap-1.5 text-sm font-medium px-3 py-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-700 transition-all disabled:opacity-50"
             >
-              <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} /> Lam moi
+              <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} /> Làm mới
             </button>
             <button
               onClick={exportToExcel}
               disabled={!filtered.length}
               className="inline-flex items-center gap-1.5 text-sm font-medium px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white shadow-sm shadow-green-600/20 transition-all disabled:opacity-50"
             >
-              <Download className="w-4 h-4" /> Tai Excel
+              <Download className="w-4 h-4" /> Tải Excel
             </button>
           </div>
         </div>
@@ -406,7 +406,7 @@ const AdminDashboard = () => {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
               <input
                 type="text"
-                placeholder="Tim ten, lien he, thanh pho, y tuong..."
+                placeholder="Tìm tên, liên hệ, thành phố, ý tưởng..."
                 className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 bg-gray-50"
                 value={searchTerm}
                 onChange={(event) => setSearchTerm(event.target.value)}
@@ -416,7 +416,7 @@ const AdminDashboard = () => {
               onClick={() => setShowFilters((value) => !value)}
               className={`inline-flex items-center gap-1.5 text-sm font-medium px-4 py-2.5 rounded-xl border transition-all ${showFilters ? 'bg-green-50 border-green-500 text-green-700' : 'border-gray-200 text-gray-600 hover:bg-gray-50'}`}
             >
-              <Filter className="w-4 h-4" /> Bo loc
+              <Filter className="w-4 h-4" /> Bộ lọc
               {activeFilterCount > 0 && (
                 <span className="ml-1 w-5 h-5 flex items-center justify-center rounded-full bg-green-600 text-white text-[10px] font-bold">
                   {activeFilterCount}
